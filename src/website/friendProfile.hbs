@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Phoenix</title>
+    <link rel="shortcut icon" type="image/png" href="img/sust.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    {{!-- <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+
+
+
+    <style type="text/css">
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        @media (max-width:740px) {
+            .full-page-intro {
+                height: 1000px
+            }
+        }
+
+        .carousel {
+            height: 50%
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-inner .active,
+        .carousel .carousel-inner .carousel-item {
+            height: 100%
+        }
+
+        @media (max-width:776px) {
+            .carousel {
+                height: 100%
+            }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #1C2331
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #1C2331
+            }
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1050px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 700px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .btn-transfer {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+
+        }
+
+        .buttonList:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .ipPeopleList {
+            width: 275px;
+            text-align: left;
+        }
+
+        .ipPeopleList:hover {
+            background-color: #C0C0C0;
+            color: black;
+        }
+
+        .react:hover {
+            transform: scale(1.5);
+        }
+    </style>
+    <style>
+        .sir {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .sir .madam {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 102%;
+        }
+
+        .sir .madam::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .sir:hover .madam {
+            visibility: visible;
+            font-size: 15px;
+        }
+
+        .elementToFadeInAndOut {
+            z-index: 5;
+
+            -webkit-animation: fadeinout 5s linear forwards;
+            animation: fadeinout 5s linear forwards;
+        }
+
+        @-webkit-keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,80% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,80% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-size: small;">
+
+    <!-- Start your project here-->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+        style="background-color:#21260F	; height:50px">
+        <div class="container">
+
+            <!-- Brand -->
+
+            <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
+                <span class="brand-text">SUST</span><large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                        <div class="active-purple-4 mb-6">
+                            <form autocomplete="off" action="/search" method="POST">
+                                <input class="form-control" type="text" name="Search" placeholder="Search" aria-label="Search">
+                                <button type="submit" style="display: none;" value="Search"></button>
+                            </form>
+                        </div>
+                </ul>
+
+                <a class="btn-floating btn-lg btn-comm" style="color: white;" type="button" role="button"><i class="fas fa-comments"></i>
+                <span class="counter" style="color: red;">3</span>
+                </a>
+                <a class="btn-floating btn-lg btn-bell" style="color: white;" type="button" role="button">
+                    <i class="far fa-bell"></i>
+                    <span class="counter" style="color: red;">5</span>
+                </a>
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="./img/picture1.jpg" class="rounded-circle z-depth-0"
+                                style="border-radius: 50%; width: 50px;" alt="avatar image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-55" style="width: 10px;">
+                            <a class="dropdown-item buttonList" href="/profile">My Account</a>
+                            <a class="dropdown-item buttonList" href="/logout">Logout</a>
+                            {{!-- <a class="dropdown-item buttonList" href="#">Something else here</a> --}}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Creating Gap-->
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- Creating Gap-->
+
+    <!-- Success Alert -->
+    {{!-- <div class="alert alert-success alert-dismissible fade show elementToFadeInAndOut"
+        style="visibility:hidden;  width: 50%;position:fixed; top:70px; left:680px;float:right">
+        <strong>Success!</strong> Your request has been sent successfully.
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div> --}}
+    <!-- Success Alert -->
+
+    <!-- Full Page Intro -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"> 
+                <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <ul class="row">
+                            <h5 class="card-title" style="font-weight: bold; text-align: center;">
+                                <img src="./img/picture1.jpg" class="rounded-circle" style="float: left; width: 50px;height: 45px;">
+                                <form action="" method="POST">
+                                    <a href="/profile"><span style="position: absolute; top: 30px; left: 110px; color: black;">Biddut Sarker
+                                            Bijoy</span></a>
+                                </form>
+                            </h5>
+                        </ul>
+                        <hr>
+                        <ul class="list-group">
+                            <a href="/home" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-home"></i> News Feed
+                                </li>
+                            </a>
+                            <a href="/people" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> People
+                                </li>
+                            </a>
+                            <a href="/group" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> Groups
+                                </li>
+                            </a>
+                            <a href="/messenger" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fab fa-facebook-messenger"></i> Messenger
+                                </li>
+                            </a>
+                            <a href="/notification" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="far fa-bell"></i> Notifications
+                                </li>
+                            </a>
+                            <br>
+                            {{!-- <a href="/viewAllPeople" class="btn btn-primary btn-lg btn-block"
+                                                        style="height: 45px; font-size: small;">View All</a> --}}
+                            {{!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> --}}
+                        
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title" style="font-weight: bold; text-align: center;">My Groups
+                            </h4>
+                            <hr>
+                            <ul class="list-group">
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 16 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 17 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 18 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 19 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE Current Student
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE Teacher Student Group
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                            </ul>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="col-md-9" style="padding-right: 30px;">
+                <!-- Rotating card -->
+                {{!-- <div class="card-wrapper"> --}}
+                    <div class="card">
+                        <!-- Front Side -->
+                        <div class="face front">
+                
+                            <!-- Image-->
+                            <div class="card-up">
+                                <img class="card-img-top" style="height: 450px;" src="img/indexPage/picture2.png"
+                                    alt="Image with a photo of clouds.">
+                            </div>
+                
+                            <!-- Avatar -->
+                            <div class="avatar mx-auto white" style="position: absolute; left: 410px; top: 300px;" >
+                                <img src="./img/saba.jpg"
+                                    class="rounded-circle" width="200px" height="200px" alt="Sample avatar image.">
+                            </div>
+                
+                            <!-- Content -->
+
+                        </div>
+                        <div>
+                            <br>
+                            <br>
+                            {{!-- <br> --}}
+                            {{!-- <br> --}}
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <h2  style="position: relative; left: 210px;">Syeda Jannatus Saba</h2>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-primary btn-sm" style="position: relative; left: -40px;">Follow</button>
+                                </div>
+                                <div class="col-md-2"> 
+                                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect btn-sm" style="position: relative; left: -75px;">Message</button>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <small style="position: absolute; right: 35px;">2 posts</small>
+                                </div>
+                                <div class="col-md-2">
+                                    <small style="position: absolute; left: 60px;">1 followers</small>
+                                </div>
+                                <div class="col-md-5">
+                                    <small style="position: absolute; left: 15px;">0 following</small>
+                                </div>
+
+                            </div>
+                            <div>
+                                <br>
+                                <br>
+                                {{!-- <br> --}}
+                            </div>
+                            {{!-- <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <div class="form-group green-border-focus">
+                                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"
+                                        placeholder="Write something here..."></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" onchange="ValidateSize(this)" name="myImage"
+                                                    accept="image/x-png,image/gif,image/jpeg" id="inputGroupFile01"
+                                                    aria-describedby="inputGroupFileAddon01" required>
+                                                <label  class="custom-file-label" for="inputGroupFile01">File</label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <small style="text-align: center;">File size must be under 5MB</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" style="float: right; top: -8px;" class="btn btn-indigo">Post</button>
+                                    </div>
+                                </div>
+                            
+                            </li> --}}
+                            <br>
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="./img/saba.jpg" class="rounded-circle" style="float: left; width: 40px;height: 35px;">
+                                        <form action="" method="POST">
+                                            <a href="#" style="color: black;">
+                                                <h5 style="position: absolute; top: 8px; left: 70px;"><b>Syeda Jannatus Saba</b></h5>
+                                            </a>
+                                        </form>
+                            
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class= "col-md-5" style="position: relative; right: -198px; visibility: hidden;">
+                                        {{!-- <div class="container mt-5"> --}}
+                                        <div class="dropdown" >
+                                            <a class="btn-floating btn-lg grey dropdown-toggle" type="button" id="dropdownMenu3"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: black;"
+                                                    class="fas fa-ellipsis-v"></i></a>
+                                            <br>
+                                            <div class="dropdown-menu dropdown-primary" style="width: 15px;">
+                                                <a class="dropdown-item" href="#"><i class="fas fa-pen-alt"></i>&nbsp;&nbsp;Edit</a>
+                                                <a class="dropdown-item" href="#"><i class="fas fa-trash"></i>&nbsp;&nbsp;Delete</a>
+                                            </div>
+                                        </div>
+                                        {{!-- </div> --}}
+                            
+                                    </div>
+                                </div>
+                                <h6 style="font-size: small;" class="card-subtitle mb-2 text-muted">12:23pm 12 Jun 2019</h6>
+                                
+                                <h8>Here are some new results from our previous model. We obtained these results using Maharjan's dataset. In the
+                                    first
+                                    1000 lines. We will discuss this during the meeting.
+                                    Sir, please find the attached figures. </h8>
+                                
+                                <figure class="figure" style="padding-top: 30px; padding-left: 30px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1" alt="..."
+                                        style="width: 650px;height: 350px;">
+                                </figure>
+                                <div class="row">
+                                    <div class="col-md-6" style="position: relative; left: 28px;">
+                                        <h5 href="#" style="color: black; ">
+                                            <small>0 likes</small>
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-1">
+                                
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -158px;">
+                                        <h5 href="#" style="color: black;">
+                                            <small>0 comments</small>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6" style="position: relative; left: 105px;">
+                                        <h5 href="#" style="color: black;">
+                                            <h6><i class="fas fa-thumbs-up"></i><b> Like</b></h6>
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-1">
+                                
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -85px;">
+                                        <h5 href="#" style="color: black;">
+                                            <h6><i class="fas fa-comment"></i><b> Comment</b></h6>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <form autocomplete="off" action="/search" method="POST">
+                                    <input class="form-control" type="text" name="Search" placeholder="Add a comment..." aria-label="Search">
+                                    <button type="submit" style="display: none;" value="Search"></button>
+                                </form>
+                            </li>
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">                            
+                                <div class="p-2 bg-light">
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <a style="text-decoration:none" href="#">Sowmen Das Dipto </a>
+                                            <span class="small text-muted">2:05 AM, 15 Nov 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In the first 1000
+                                                lines. We will discuss this during the meeting. Sir, please find the attached figures.
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                            
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE"> <a style="text-decoration:none" href="#">Biddut
+                                                Sarker Bijoy </a>
+                                            <span class="small text-muted">12:34 PM, 21 Jun 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 mx-1 float-right">Delete</button>
+                            
+                                            <a href="#" class="btn btn-warning btn-sm p-0 m-0 float-right"
+                                                style="position: relative; top: 6px;">Edit</a>
+                            
+                                            <p>
+                                                Sentinet implemented successfully. I am briefly describing the data distribution and accuracy here
+                                                for all genres. Sir,
+                                                please find the attached figure.
+                            
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <a style="text-decoration:none" href="#">Sowmen Das Dipto </a>
+                                            <span class="small text-muted">2:05 AM, 15 Nov 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In
+                                                the first 1000
+                                                lines. We will discuss this during the meeting. Sir, please find the attached figures.
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <a style="text-decoration:none" href="#">Sowmen Das Dipto </a>
+                                            <span class="small text-muted">2:05 AM, 15 Nov 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In
+                                                the first 1000
+                                                lines. We will discuss this during the meeting. Sir, please find the attached figures.
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf"> <input
+                                                type="hidden" name="_method" value="DELETE"> <a style="text-decoration:none" href="#">Syeda Jannatus
+                                                Saba</a>
+                                            <span class="small text-muted">1:04 PM, 20 Jun 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 mx-1 float-right">Delete</button>
+                            
+                                            <a href="#" <a href="#" class="btn btn-warning btn-sm p-0 m-0 float-right"
+                                                style="position: relative; top: 6px;">Edit</a>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In the first 1000
+                                                lines.Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In the first
+                                                <a style="text-decoration:none" href="#">...</a>
+                                            </p>
+                                        </form>
+                                    </div>
+                                    <a style="text-decoration:none" href="#">
+                                        <p class="text-center m-0 p-0">view all comments</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="./img/saba.jpg" class="rounded-circle" style="float: left; width: 40px;height: 35px;">
+                                        <form action="" method="POST">
+                                            <a href="#" style="color: black;">
+                                                <h5 style="position: absolute; top: 8px; left: 70px;"><b>Syeda Jannatus Saba</b></h5>
+                                            </a>
+                                        </form>
+                            
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -198px; visibility: hidden;">
+                                        {{!-- <div class="container mt-5"> --}}
+                                        <div class="dropdown">
+                                            <a class="btn-floating btn-lg grey dropdown-toggle" type="button" id="dropdownMenu3"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: black;"
+                                                    class="fas fa-ellipsis-v"></i></a>
+                                            <br>
+                                            <div class="dropdown-menu dropdown-primary" style="width: 15px;">
+                                                <a class="dropdown-item" href="#"><i class="fas fa-pen-alt"></i>&nbsp;&nbsp;Edit</a>
+                                                <a class="dropdown-item" href="#"><i class="fas fa-trash"></i>&nbsp;&nbsp;Delete</a>
+                                            </div>
+                                        </div>
+                                        {{!-- </div> --}}
+                            
+                                    </div>
+                                </div>
+                                <h6 style="font-size: small;" class="card-subtitle mb-2 text-muted">12:23pm 12 Jun 2019</h6>
+                            
+                                <h8>Here are some new results from our previous model. We obtained these results using Maharjan's dataset. In the
+                                    first
+                                    1000 lines. We will discuss this during the meeting.
+                                    Sir, please find the attached figures. </h8>
+                            
+                                <figure class="figure" style="padding-top: 30px; padding-left: 30px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1" alt="..."
+                                        style="width: 650px;height: 350px;">
+                                </figure>
+                                <div class="row">
+                                    <div class="col-md-6" style="position: relative; left: 28px;">
+                                        <h5 href="#" style="color: black; ">
+                                            <small>0 likes</small>
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-1">
+                            
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -158px;">
+                                        <h5 href="#" style="color: black;">
+                                            <small>0 comments</small>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6" style="position: relative; left: 105px;">
+                                        <h5 href="#" style="color: black;">
+                                            <h6><i class="fas fa-thumbs-up"></i><b> Like</b></h6>
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-1">
+                            
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -85px;">
+                                        <h5 href="#" style="color: black;">
+                                            <h6><i class="fas fa-comment"></i><b> Comment</b></h6>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <form autocomplete="off" action="/search" method="POST">
+                                    <input class="form-control" type="text" name="Search" placeholder="Add a comment..." aria-label="Search">
+                                    <button type="submit" style="display: none;" value="Search"></button>
+                                </form>
+                            </li>
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <div class="p-2 bg-light">
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <a style="text-decoration:none" href="#">Sowmen Das Dipto </a>
+                                            <span class="small text-muted">2:05 AM, 15 Nov 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In the first 1000
+                                                lines. We will discuss this during the meeting. Sir, please find the attached figures.
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                            
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE"> <a style="text-decoration:none" href="#">Biddut
+                                                Sarker Bijoy </a>
+                                            <span class="small text-muted">12:34 PM, 21 Jun 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 mx-1 float-right">Delete</button>
+                            
+                                            <a href="#" class="btn btn-warning btn-sm p-0 m-0 float-right"
+                                                style="position: relative; top: 6px;">Edit</a>
+                            
+                                            <p>
+                                                Sentinet implemented successfully. I am briefly describing the data distribution and accuracy here
+                                                for all genres. Sir,
+                                                please find the attached figure.
+                            
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <a style="text-decoration:none" href="#">Sowmen Das Dipto </a>
+                                            <span class="small text-muted">2:05 AM, 15 Nov 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In
+                                                the first 1000
+                                                lines. We will discuss this during the meeting. Sir, please find the attached figures.
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <a style="text-decoration:none" href="#">Sowmen Das Dipto </a>
+                                            <span class="small text-muted">2:05 AM, 15 Nov 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In
+                                                the first 1000
+                                                lines. We will discuss this during the meeting. Sir, please find the attached figures.
+                                            </p>
+                            
+                                        </form>
+                                    </div>
+                                    <div class="my-2 px-2 bg-white">
+                                        <form class="" action="#" method="POST">
+                                            <input type="hidden" name="_token" value="PT1Jq2vAsW5kOjvSIjFNdfyqxSjkIram7Ckozyrf"> <input
+                                                type="hidden" name="_method" value="DELETE"> <a style="text-decoration:none" href="#">Syeda Jannatus
+                                                Saba</a>
+                                            <span class="small text-muted">1:04 PM, 20 Jun 2019</span>
+                                            <button type="submit" class="btn btn-danger btn-sm p-0 mx-1 float-right">Delete</button>
+                            
+                                            <a href="#" <a href="#" class="btn btn-warning btn-sm p-0 m-0 float-right"
+                                                style="position: relative; top: 6px;">Edit</a>
+                            
+                                            <p>
+                                                Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In the first 1000
+                                                lines.Here are some new results from our previous model. We obtained these results using Maharjan's
+                                                dataset. In the first
+                                                <a style="text-decoration:none" href="#">...</a>
+                                            </p>
+                                        </form>
+                                    </div>
+                                    <a style="text-decoration:none" href="#">
+                                        <p class="text-center m-0 p-0">view all comments</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <br>
+                            <!-- Triggering button -->
+                        </div>
+                        <!-- Front Side -->
+                    </div>
+
+                {{!-- </div> --}}
+                <!-- Rotating card -->
+                {{!-- <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <div class="row" style="padding: 60px;"> 
+                            <!-- Rotating card -->
+                                <div id="card-1" class=" card-rotating text-center">
+                                <!-- Image-->
+                                    <img class="card-img-top" style="width: 940px; height: 500px;"  src="https://mdbootstrap.com/img/Photos/Others/photo7.jpg"
+                                        alt="Image with a photo of clouds.">
+                            
+                                    <!-- Avatar -->
+                                    <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
+                                            class="rounded-circle" alt="Sample avatar image.">
+                                    </div>
+                        
+                                    <!-- Content -->
+                                        <h4 class="font-weight-bold mb-3">Marie Johnson</h4>
+                                        <p class="font-weight-bold blue-text">Web developer</p>
+                                            <!-- Triggering button -->
+                            </div>
+                            <!-- Rotating card -->
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+            {{!-- <div class="col-md-1">                
+            </div> --}}
+        </div>
+        <div>
+        <br>
+        </div>
+    </div>
+    <!-- Full Page Intro -->
+
+<!-- Footer -->
+    <footer class="page-footer font-small gray">
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2020 CSE, SUST. All rights reserved.
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+<!-- Footer -->
+    <!--/.Footer-->
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Phoenix</title>
+    <link rel="shortcut icon" type="image/png" href="img/sust.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    {{!-- <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+
+
+
+    <style type="text/css">
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        @media (max-width:740px) {
+            .full-page-intro {
+                height: 1000px
+            }
+        }
+
+        .carousel {
+            height: 50%
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-inner .active,
+        .carousel .carousel-inner .carousel-item {
+            height: 100%
+        }
+
+        @media (max-width:776px) {
+            .carousel {
+                height: 100%
+            }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #1C2331
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #1C2331
+            }
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1050px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 700px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .btn-transfer {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+
+        }
+
+        .buttonList:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .ipPeopleList {
+            width: 275px;
+            text-align: left;
+        }
+
+        .ipPeopleList:hover {
+            background-color: #C0C0C0;
+            color: black;
+        }
+
+        .react:hover {
+            transform: scale(1.5);
+        }
+    </style>
+    <style>
+        .sir {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .sir .madam {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 102%;
+        }
+
+        .sir .madam::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .sir:hover .madam {
+            visibility: visible;
+            font-size: 15px;
+        }
+
+        .elementToFadeInAndOut {
+            z-index: 5;
+
+            -webkit-animation: fadeinout 5s linear forwards;
+            animation: fadeinout 5s linear forwards;
+        }
+
+        @-webkit-keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,80% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,80% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-size: small;">
+
+    <!-- Start your project here-->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+        style="background-color:#21260F	; height:50px">
+        <div class="container">
+
+            <!-- Brand -->
+
+            <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
+                <span class="brand-text">SUST</span><large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                        <div class="active-purple-4 mb-6">
+                            <form autocomplete="off" action="/search" method="POST">
+                                <input class="form-control" type="text" name="Search" placeholder="Search" aria-label="Search">
+                                <button type="submit" style="display: none;" value="Search"></button>
+                            </form>
+                        </div>
+                </ul>
+
+                <a class="btn-floating btn-lg btn-comm" style="color: white;" type="button" role="button"><i class="fas fa-comments"></i>
+                <span class="counter" style="color: red;">3</span>
+                </a>
+                <a class="btn-floating btn-lg btn-bell" style="color: white;" type="button" role="button">
+                    <i class="far fa-bell"></i>
+                    <span class="counter" style="color: red;">5</span>
+                </a>
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="./img/picture1.jpg" class="rounded-circle z-depth-0"
+                                style="border-radius: 50%; width: 50px;" alt="avatar image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-55" style="width: 10px;">
+                            <a class="dropdown-item buttonList" href="/profile">My Account</a>
+                            <a class="dropdown-item buttonList" href="/logout">Logout</a>
+                            {{!-- <a class="dropdown-item buttonList" href="#">Something else here</a> --}}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Creating Gap-->
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- Creating Gap-->
+
+    <!-- Success Alert -->
+    {{!-- <div class="alert alert-success alert-dismissible fade show elementToFadeInAndOut"
+        style="visibility:hidden;  width: 50%;position:fixed; top:70px; left:680px;float:right">
+        <strong>Success!</strong> Your request has been sent successfully.
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div> --}}
+    <!-- Success Alert -->
+
+    <!-- Full Page Intro -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"> 
+                <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <ul class="row">
+                            <h5 class="card-title" style="font-weight: bold; text-align: center;">
+                                <img src="./img/picture1.jpg" class="rounded-circle" style="float: left; width: 50px;height: 45px;">
+                                <form action="" method="POST">
+                                    <a href="/profile"><span style="position: absolute; top: 30px; left: 110px; color: black;">Biddut Sarker
+                                            Bijoy</span></a>
+                                </form>
+                            </h5>
+                        </ul>
+                        <hr>
+                        <ul class="list-group">
+                            <a href="/home" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-home"></i> News Feed
+                                </li>
+                            </a>
+                            <a href="/people" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> People
+                                </li>
+                            </a>
+                            <a href="/group" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> Groups
+                                </li>
+                            </a>
+                            <a href="/messenger" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fab fa-facebook-messenger"></i> Messenger
+                                </li>
+                            </a>
+                            <a href="/notification" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="far fa-bell"></i> Notifications
+                                </li>
+                            </a>
+                            <br>
+                            {{!-- <a href="/viewAllPeople" class="btn btn-primary btn-lg btn-block"
+                                                        style="height: 45px; font-size: small;">View All</a> --}}
+                            {{!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> --}}
+                        
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title" style="font-weight: bold; text-align: center;">My Groups
+                            </h4>
+                            <hr>
+                            <ul class="list-group">
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 16 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 17 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 18 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE - 19 Batch
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE Current Student
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <li class="list-group-item ipPeopleList">CSE Teacher Student Group
+                                        <span class="float-right px-1 text-white bg-success border rounded"
+                                            style="position: absolute; top: 10px; right: 5px;"><img src="./img/indexPage/picture4.png"
+                                                class="rounded-circle" style=" width: 30px;"></span>
+                                    </li>
+                                </a>
+                            </ul>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <div class="row" style="padding: 10px;"> 
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..." style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                <h6>SUST CSE 16 Batch</h6>
+                                <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 16 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 16 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 16 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 17 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 17 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 17 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 18 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE 18 Batch</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE Teacher Student Group</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE Teacher Student Group</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            <li class="list-group-item" style="width: 340px;">
+                                <figure class="figure" style="padding-top: 5px; padding-left: 70px; ">
+                                    <img src="img/indexPage/picture3.png" class="figure-img img-fluid z-depth-1 rounded-circle" alt="..."
+                                        style="width: 150px;height: 130px;">
+                                </figure>
+                                <center>
+                                    <h6>SUST CSE Teacher Student Group</h6>
+                                    <button type="button" class="btn btn-indigo btn-sm">Join</button>
+                                </center>
+                            
+                            </li>
+                            
+                        </div>
+                        {{!-- <div style='width: 500px;'> --}}
+
+                        {{!-- </div> --}}
+                        <!-- Title -->
+                        {{!-- <li class="list-group-item"> --}}
+                                {{!-- <img src="./img/picture1.jpg" class="rounded-circle" style="float: left; width: 50px;"> --}}
+                                {{!-- <div class="form-group green-border-focus">
+                                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="3" placeholder="Write something here..."></textarea>
+                                </div> --}}
+                       
+                        {{!-- </li> --}}
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+        <br>
+        </div>
+    </div>
+    <!-- Full Page Intro -->
+
+<!-- Footer -->
+    <footer class="page-footer font-small gray">
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2020 CSE, SUST. All rights reserved.
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+<!-- Footer -->
+    <!--/.Footer-->
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
