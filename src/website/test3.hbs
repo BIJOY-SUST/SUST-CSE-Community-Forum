@@ -1,0 +1,69 @@
+//Start Notification
+                                var friendPostId = button.value;
+
+                                var notificationData = {};
+                                notificationData.friendOrGroup = 'friend';
+                                notificationData.postKey = button.value;
+                                notificationData.fromKey = myKey;
+                                notificationData.fromName = myName;
+                                notificationData.text = myName+' likes on your post'
+
+
+                                socket.on('postCommentLikeNotification', function (dataNotification) {
+                                    showDesktopNotification(SUSTCSELIFE, dataNotification.text);
+                                });
+                                /**
+                                * Check Browser Notification Permission
+                                * @type window.Notification|Window.Notification|window.webkitNotification|Window.webkitNotification|Window.mozNotification|window.mozNotification
+                                */
+                                var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+                                Notification.requestPermission(function (permission) {
+                                });
+                                /**
+                                 * Request Browser Notification Permission 
+                                 * @type Arguments
+                                 */
+                                function requestNotificationPermissions() {
+                                    if (Notification.permission !== 'denied') {
+                                        Notification.requestPermission(function (permission) {
+                                        });
+                                    }
+                                }
+                                /**
+                                 * Show Desktop Notification If Notification Allow
+                                 * @param {type} title
+                                 * @param {type} message
+                                 * @param {type} icon
+                                 * @returns {undefined}
+                                 */
+                                function showDesktopNotification(message, body, icon, sound, timeout) {
+                                    if (!timeout) {
+                                        timeout = 4000;
+                                    }
+                                    requestNotificationPermissions();
+                                    var instance = new Notification(
+                                        message, {
+                                        body: body,
+                                        icon: icon,
+                                        sound: sound
+                                    }
+                                    );
+                                    instance.onclick = function () {
+                                        // Something to do
+                                    };
+                                    instance.onerror = function () {
+                                        // Something to do
+                                    };
+                                    instance.onshow = function () {
+                                        // Something to do
+                                    };
+                                    instance.onclose = function () {
+                                        // Something to do
+                                    };
+                                    if (sound) {
+                                        instance.sound;
+                                    }
+                                    setTimeout(instance.close.bind(instance), timeout);
+                                    return false;
+                                }
+                                //End Notification

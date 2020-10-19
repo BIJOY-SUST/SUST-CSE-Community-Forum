@@ -97,7 +97,7 @@
 
 </head>
 
-<body>
+<body style="font-size: medium; font-family: 'Times New Roman', Times, serif;">
 
     <!-- Start your project here-->
     {{!-- <header> --}}
@@ -109,10 +109,13 @@
         <div class="container">
 
             <!-- Brand -->
-
+            <img src="./img/sust.png" style="height:40px; width:40px;">
+            <div>
+                <li class="nav-item"></li>
+            </div>
             <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
                 {{!-- <strong>Phoenix</strong> --}}
-                <span class="brand-text">SUST</span><large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span>
+                <span class="brand-text">SUST</span><large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span><span style="position: relative;top: -10px;left: 1px;">&#945;</span>
             </a>
 
             <!-- Collapse -->
@@ -131,19 +134,20 @@
 
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons">
-
+                
                     <li class="nav-item">
-                        <a href="/login" class="nav-link border border-light rounded">
-                            <i class="fa fa-user mr-2"></i>Log In
+                        <a href="/register" class="nav-link border border-light rounded">
+                            <i class="fa fa-user mr-2"></i>Sign Up
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" target="_blank">
                         </a>
                     </li>
+                
                     <li class="nav-item">
-                        <a href="/register" class="nav-link border border-light rounded">
-                            <i class="fa fa-user mr-2"></i>Sign Up
+                        <a href="/login" class="nav-link border border-light rounded">
+                            <i class="fas fa-sign-in-alt"></i>Log In
                         </a>
                     </li>
                 </ul>
@@ -153,6 +157,18 @@
         </div>
     </nav>
     <!-- Navbar -->
+
+    <!-- Success Alert -->
+    <div class="alert alert-{{alert_name}} alert-dismissible fade show" role="alert"
+        style="visibility:{{alert_msg_visibility}};  width: 50%;position:fixed; top:50px; left:680px;float:right">
+        <strong style="font-weight: bold;">{{SorF}}</strong> {{status}}
+        {{!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        
+        </button> --}}
+    </div>
+    <!-- Success Alert -->
+
 
     <!-- Full Page Intro -->
     <div class="view full-page-intro" style="height:100%;width: 100%;">
@@ -221,7 +237,7 @@
                                     <div class="md-form">
                                         <i class="fas fa-envelope prefix"></i>
                                         <input type="email" id="inputValidationEx2" name="email" class="form-control" required>
-                                        <label for="inputValidationEx2" data-error="wrong" data-success="right">Enter Your e-mail address</label>
+                                        <label for="inputValidationEx2" data-error="wrong" data-success="right">Enter your e-mail address</label>
                                     </div> 
                                     <div class="md-form">
                                         <i class="fas fa-lock prefix"></i>
@@ -238,7 +254,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <small style="text-align: center;">Image Size must be Under 2MB</small>
+                                        <small style="text-align: center;">Image size must be under 5MB</small>
                                     </div>
 
                                     {{!-- <div class="md-form">
@@ -248,7 +264,7 @@
                                     </div> --}}
                                     <div class="text-center">
                                         <br>
-                                        <button class="btn btn-indigo">Submit</button>
+                                        <button class="btn  btn-indigo" style="text-transform: none;">Submit</button>
                                         <hr>
                                         <fieldset class="form-check">
                                             {{!-- <input type="checkbox" class="form-check-input" id="checkbox1"> --}}
@@ -281,11 +297,17 @@
     <!-- Full Page Intro -->
 
     {{!-- </header> --}}
+    <!--Footer-->
     <footer class="page-footer font-small gray">
     
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">
-            © 2020 CSE, SUST. All rights reserved.
+        <div class="footer-copyright text-center py-1">
+            {{!-- © 2020 CSE, SUST. All rights reserved. --}}
+            {{!-- <div id="footer"> --}}
+            <div class="">&copy All Right Reserved</div>
+            <div><a href="/behindTheScene">Behind The Scene</a> <strong>|</strong> Powered by <a
+                    href="http://cse.sust.edu">Dept. of CSE, SUST</a></div>
+            {{!-- </div> --}}
         </div>
         <!-- Copyright -->
     
@@ -309,8 +331,8 @@
     <script type="text/javascript">
         function ValidateSize(file) {
             var FileSize = file.files[0].size / 1024 / 1024; // in MB
-            if (FileSize > 2) {
-                alert('File size exceeds 2 MB');
+            if (FileSize > 5) {
+                alert('File size exceeds 5 MB');
                 $(file).val(''); //for clearing with Jquery
             } else {
 

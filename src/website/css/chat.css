@@ -4,10 +4,10 @@ position: relative;
 overflow-y: scroll; }
 
 .card.chat-room .members-panel-1 {
-height: 570px; }
+height: 720px; }
 
 .card.chat-room .chat-1 {
-height: 495px; }
+height: 640px; }
 
 .card.chat-room .friend-list li {
 border-bottom: 1px solid #e0e0e0; }
