@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SUSTCSELIFE</title>
+    <link rel="shortcut icon" type="image/png" href="img/sust.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    {{!-- <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+    <style type="text/css">
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        @media (max-width:740px) {
+            .full-page-intro {
+                height: 1000px
+            }
+        }
+
+        .carousel {
+            height: 50%
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-inner .active,
+        .carousel .carousel-inner .carousel-item {
+            height: 100%
+        }
+
+        @media (max-width:776px) {
+            .carousel {
+                height: 100%
+            }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #1C2331
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #1C2331
+            }
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1050px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 700px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .btn-transfer {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+
+        }
+
+        .buttonList:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .ipPeopleList {
+            width: 310px;
+            text-align: left;
+        }
+
+        .ipPeopleList:hover {
+            background-color: #C0C0C0;
+            color: black;
+        }
+
+        .react:hover {
+            transform: scale(1.5);
+        }
+    </style>
+    <style>
+        .developer {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+    
+        }
+    
+        .developer:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+        }
+    </style>
+    <style>
+        .sir {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .sir .madam {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 102%;
+        }
+
+        .sir .madam::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .sir:hover .madam {
+            visibility: visible;
+            font-size: 15px;
+        }
+
+        .elementToFadeInAndOut {
+            z-index: 5;
+
+            -webkit-animation: fadeinout 5s linear forwards;
+            animation: fadeinout 5s linear forwards;
+        }
+
+        @-webkit-keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-size: medium; font-family: 'Times New Roman', Times, serif;">
+
+    <!-- Start your project here-->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+        style="background-color:#21260F	; height:50px">
+        <div class="container">
+
+            <!-- Brand -->
+            <img src="./img/sust.png" style="height:40px; width:40px;">
+            <div>
+                <li class="nav-item"></li>
+            </div>
+            <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
+                <span class="brand-text">SUST</span><large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span><span style="position: relative;top: -10px;left: 1px;">&#945;</span>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <div class="active-purple-4 mb-6">
+                        <form autocomplete="off" action="/search" method="POST">
+                            <input class="form-control" type="text" name="Search" placeholder="Search"
+                                aria-label="Search" required>
+                            <button type="submit" style="display: none;" value="Search"></button>
+                        </form>
+                    </div>
+                </ul>
+
+                {{!-- <a href="/messenger" class="btn-floating btn-lg btn-comm" style="color: white;" type="button" role="button"><i
+                        class="fab fa-facebook-messenger"></i>
+                    <span class="counter" style="color: red;">3</span>
+                </a> --}}
+                <a href="notification" class="btn-floating btn-lg btn-bell" style="color: white;" type="button" role="button">
+                    <i class="far fa-bell"></i>
+                
+                    {{#if_greater myAllNotification 0}}
+                    <span class="counter" style="color: red;">{{myAllNotification}}</span>
+                
+                    {{/if_greater}}
+                
+                </a>
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="{{myProPic}}" class="rounded-circle z-depth-0"
+                                style="border-radius: 50%; width: 40px; height: 40px;" alt="avatar image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-55" style="width: 10px;">
+                            <a class="dropdown-item buttonList" href="/myProfile">My Account</a>
+                            <a class="dropdown-item buttonList" href="/logout">Logout</a>
+                            {{!-- <a class="dropdown-item buttonList" href="#">Something else here</a> --}}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Creating Gap-->
+    <div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- Creating Gap-->
+
+    <!-- Success Alert -->
+    {{!-- <div class="alert alert-success alert-dismissible fade show elementToFadeInAndOut"
+        style="visibility:hidden;  width: 50%;position:fixed; top:70px; left:680px;float:right">
+        <strong>Success!</strong> Your request has been sent successfully.
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div> --}}
+    <!-- Success Alert -->
+
+    <!-- Full Page Intro -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <ul class="row">
+                            <h5 class="card-title" style="font-weight: bold; text-align: center;">
+
+                                {{!-- Notification + Socket.io --}}
+                                <form id="newWindowFormFriend" method="post" action="/myFriendOnePost" target="TheWindow">
+                                    <input type="text" name="eachPostUniqueID" hidden>
+                                    <input type="text" name="postOwnerID" hidden>
+                                </form>
+                                <form id="newWindowFormFriendProfile" method="post" action="/friendProfile" target="TheWindow">
+                                    <input type="text" name="friendUserKeyValue" hidden>
+                                </form>
+                                <form id="newWindowFormGroup" method="post" action="/groupPostSetting" target="TheWindow">
+                                    <input type="hidden" name="settingBtn" value="view" hidden>
+                                    <input type="hidden" name="eachPostUniqueID" hidden>
+                                    <input type="hidden" name="eachPostOwnerUniqueID" hidden>
+                                    <input type="hidden" name="groupUniqueID" hidden>
+                                </form>
+                                <form id="newWindowFormGroupPost" method="post" action="/viewAGroup" target="TheWindow">
+                                    <input type="hidden" name="groupKeyValue" hidden>
+                                </form>
+                                
+                                <input name="myProfileSecretKey" id="myProfileSecretKey" value="{{myKey}}" hidden>
+                                <input name="myProfileSecretKey" id="myProfileSecretName" value="{{myName}}" hidden>
+                                {{!-- Notification + Socket.io --}}
+
+
+                                <img src="{{myProPic}}" class="rounded-circle developer"
+                                    style="position:relative;left:-25px; width: 55px;height: 55px;">
+                                <a href="/myProfile"><span 
+                                        style=" font-size: 23px; position: absolute; top: 30px; left: 82px; color: black;">{{myName}}</span></a>
+                            </h5>
+                        </ul>
+                        <hr>
+                        <ul class="list-group">
+                            <a href="/home" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-home"></i> News Feed
+                                </li>
+                            </a>
+                            <a href="/watch" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fab fa-youtube"></i> Watch
+                                </li>
+                            </a>
+                            <a href="/people" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> Peoples
+                                </li>
+                            </a>
+                            <a href="/group" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> Groups
+                                </li>
+                            </a>
+                            {{!-- <a href="/messenger" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fab fa-facebook-messenger"></i>
+                                    Messenger
+                                </li>
+                            </a> --}}
+                            <a href="/notification" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="far fa-bell"></i> Notifications
+                                </li>
+                            </a>
+                            <a href="/electionMain" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-vote-yea"></i> Elections
+                                </li>
+                            </a>
+                            {{!-- <a href="/viewAllPeople" class="btn btn-primary btn-lg btn-block"
+                                style="height: 45px; font-size: small;">View All</a> --}}
+                            {{!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> --}}
+
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="card-title"
+                                    style="font-weight: bold; text-align: center; padding-left:10px; padding-top:10px; ">
+                                    My Groups</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" style="padding-right:8px;padding-left:8px; float:right;"
+                                    class="btn btn-primary btn-sm btn-rounded" data-toggle="modal"
+                                    data-target="#modalSubscriptionForm"><i class="fas fa-users" aria-hidden="true"></i>
+                                    Create one</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <ul class="list-group">
+
+                            {{#if_eq resultAllFreeGroup.length 0}}
+                                <h7 style="text-align: center;">Ops! You have no groups</h7>
+                            {{/if_eq}}
+                            {{#if_greater resultAllFreeGroup.length 0}}
+                                {{#each resultAllFreeGroup}}
+                                   <form name="friend" id="goToUserProfile" action="/viewAGroup" method="POST">
+                                        <input name="groupKeyValue" id="groupKeyValue" type="text" value="{{this.groupUniqueId}}" hidden>
+                                        <button type="submit" class="list-group-item ipPeopleList">
+                                        <span class="float-left px-1 text-white rounded"
+                                            style="position: relative; top: 0px;bottom:0px;left: -15px;"><img src="{{this.groupCoverPicAddr}}"
+                                                class="rounded-circle" style=" width: 35px; height: 30px;"></span>
+                                                {{this.groupName}}
+                                        </button>
+                                    </form>
+                                {{/each}}
+                                <br>
+                                <a href="/viewMyAllGroup" class="btn btn-sm btn-primary btn-lg btn-block"
+                                    style="height: 35px; font-size: small; text-transform:none;">View All</a>
+                            {{/if_greater}}
+
+                        </ul>
+                    </div>
+                    <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form enctype="multipart/form-data" action="/createGroup" method="POST">
+                                    <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                        <h4 class="modal-title w-100 font-weight-bold">Create a group</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+
+                                    </div>
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-5">
+                                            <i class="fas fa-users prefix grey-text"></i>
+                                            <input type="text" id="form3" name="username" class="form-control validate"
+                                                maxlength="32" required>
+                                            <label data-error="wrong" data-success="right" for="form3">Enter your group
+                                                name</label>
+                                        </div>
+
+                                        {{!-- <div class="md-form mb-4"> --}}
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span style="height: 38px;" class="input-group-text"
+                                                    id="inputGroupFileAddon01">Upload</span>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input"
+                                                    onchange="ValidateSize(this)" name="myImage"
+                                                    accept="image/x-png,image/gif,image/jpeg" id="inputGroupFile01"
+                                                    aria-describedby="inputGroupFileAddon01" required>
+                                                <label class="custom-file-label" for="inputGroupFile01">Group
+                                                    Photo</label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <small style="text-align: center;">File size must be under 5MB</small>
+                                        </div>
+                                        {{!-- </div> --}}
+
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button class="btn btn-sm btn-indigo">Create <i
+                                                class="fas fa-paper-plane-o ml-1"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9" style="padding-right: 30px;">
+                <!-- Rotating card -->
+                <div class="card">
+                    <!-- Front Side -->
+                    <div class="face front">
+            
+                        <!-- Image-->
+                        <div class="card-up">
+                            <img class="card-img-top developer" style="height: 450px;" src="{{resultUser.userCoverPicAddr}}"
+                                alt="Image with a photo of clouds.">
+                        </div>
+
+                        <style>
+                            .developer {
+                                border: 1px solid #ddd;
+                                border-radius: 4px;
+                                padding: 5px;
+                                
+                            }
+                        
+                            .developer:hover {
+                                box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                            }
+                        </style>
+            
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white rounded-circle" style="position: absolute; left: 410px; top: 300px;" >
+                            <img src="{{resultUser.userProPicAddr}}"
+                                class="rounded-circle developer" width="200px" height="200px" alt="Sample avatar image.">
+                        </div>
+            
+                        <!-- Content -->
+
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                        {{!-- <br> --}}
+                        {{!-- <br> --}}
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2  style="position: relative; left: 210px;font-family: azonix;">{{resultUser.userName}}</h2>
+                            </div>
+                            <div class="col-md-2">
+                                <form action="/followSetting" method="POST">
+                                    <input name="friendKeyValue" id="friendKeyValue" type="text" value="{{resultUser.userUniqueId}}" hidden>
+                                    <input name="iAmFollowBtn" id="iAmFollowBtn" type="text" value="{{followBtnValue}}" hidden>
+
+                                    <button type="submit" class="btn btn-primary btn-sm" style="position: relative; left: -20px; text-transform:none;" 
+                                    onclick="followNotification(this)" value="{{resultUser.userUniqueId}}" >{{followBtnText}}</button>
+                                </form>
+                            </div>
+                            {{!-- <div class="col-md-2"> 
+                                <form action="/messenger" method="GET">
+                                    <button type="submit" class="btn btn-outline-primary btn-rounded waves-effect btn-sm" style="position: relative; left: -55px;text-transform:none;">Message</button>
+                                </form>
+
+                            </div> --}}
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <small style="position: absolute; right: 35px;">{{sumAllPost}} posts</small>
+                            </div>
+                            <div class="col-md-2">
+                                <small style="position: absolute; left: 60px;">{{sumAllFollowing}} followers</small>
+                            </div>
+                            <div class="col-md-5">
+                                <small style="position: absolute; left: 15px;">{{sumAllFollower}} following</small>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <br>
+                            <br>
+                            {{!-- <br> --}}
+                        </div>
+
+                        <br>
+                        <!-- Start: For file view check-->
+                        {{#each allMyPost}}
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{this.postOwnerPic}}" class="rounded-circle" style="float: left; width: 40px;height: 35px;">
+
+                                        <form id="postOwnerIDClick" action="/friendProfile" method="POST">
+                                            <input name="friendUserKeyValue" id="friendUserKeyValue" type="text" value="{{this.userORGroupUniqueID}}" hidden>
+
+                                            <button type="submit" class="btn btn-link hoverColor"
+                                                style="position: absolute; top: -15px; left: 20px;font-weight: bold; font-size:medium; text-decoration: none;text-transform:none;">
+                                                {{this.postOwnerName}}
+                                            </button>
+                                        </form>
+                            
+                            
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -198px;">
+                                        <style type="text/css">
+                                                .postDropDown a {
+                                                   background-color: white;
+                                                    color: black;
+                                                }
+                                                .postDropDown a:hover {
+                                                    background-color: grey;
+                                                    color: black;
+                                                }
+                                            </style>
+                                            <div class="dropdown postDropDown">
+                                                
+                                                <a class="btn-floating btn-lg  dropdown-toggle rounded" type="button" id="dropdownMenu3"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: black;"
+                                                        class="fas fa-ellipsis-v"></i></a>
+                                                <br>
+                                            <div class="dropdown-menu dropdown-primary" style="width: 15px;">
+                                                <form class="" id="viewAllCommentIDClick" action="/myFriendOnePost" method="POST">
+                                                    <input class="input1"  type="text" name="postOwnerID" value="{{../resultUser.userUniqueId}}" hidden>
+                                                    <input class="input1"  type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                    <button class="dropdown-item" type="submit" name="settingBtn" value="view"><i
+                                                            class="fas fa-share"></i>&nbsp;&nbsp;View</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <h6 style="font-size: small;" class="card-subtitle mb-2 text-muted">{{this.postTime}}</h6>
+                            
+                                {{#if this.postText}}
+                                    <h8 style="white-space: pre-wrap;">{{this.postText}} </h8>
+                                {{/if}}
+                            
+                                {{#if this.isImageFile}}
+                                    <figure class="figure" style="padding-top: 30px; padding-left: 2px; ">
+                                        <img src="{{this.postFileAddr}}" class="figure-img img-fluid z-depth-1" alt="..."
+                                            style="width: 705px;height: 400px;">
+                                    </figure>
+                                {{/if}}
+                            
+                                {{#if this.isPdfFile}}
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <center id="myPdf">
+                                        <embed src="{{this.postFileAddr}}" width="705px" height="700px" />
+                                    </center>
+                                {{/if}}
+                            
+                                {{#if this.isVideoFile}}
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <video class="z-depth-1" style="width: 100%; height: auto;" autoplay loop controls muted>
+                                        <source src="{{this.postFileAddr}}" type="video/mp4" />
+                                    </video>
+                                {{/if}}
+                            
+                                <div class="row">
+                                    <div class="col-md-6" style="position: relative; left: 28px;">
+                                        <h8 id="{{this.postUniqueId}}" style="color: black; ">
+                                            <small style="font-size: smaller;">{{this.likeCount}} likes</small>
+                                        </h8>
+                                    </div>
+                                    <div class="col-md-1">
+                                
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -185px;">
+                                        <h8 style="color: black;">
+                                            <small style="font-size: smaller;">{{this.commentCount}} comments</small>
+                                        </h8>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <style type="text/css">
+                                        .hoverColor:hover {
+                                            color: blue;
+                                        }
+                                    </style>
+                                    <div class="col-md-6" style="position: relative; left: 100px;">
+                                        {{!-- <form enctype="multipart/form-data" id="clickLikeButton" action="" method="POST"> --}}
+                                        {{#each ../resultAllLikeList}}
+                                            {{#if_eq this.originPostUniqueID ../this.postUniqueId}}
+                                                {{#if_eq this.ownerLikeUniqueID ../../myKey}}
+                                                    {{#if_eq this.isLike "no"}}
+                                                        <button type="submit" style="color: black; text-decoration: none;" onclick="submitLike(this)"
+                                                            value="{{../this.postUniqueId}}" class="btn btn-link p-0 m-1" name="likeButton" id="blackBtn">
+                                                            <h6 class="hoverColor"><i class="fas fa-thumbs-up"></i><b> Like</b></h6>
+                                                        </button>
+                                                    {{/if_eq}}
+                                                    {{#if_eq this.isLike "yes"}}
+                                                        <button type="submit" style="color: blue; text-decoration: none;" onclick="submitLike(this)"
+                                                            value="{{../this.postUniqueId}}" class="btn btn-link p-0 m-1" name="likeButton" id="blueBtn">
+                                                            <h6 class="hoverColor"><i class="fas fa-thumbs-up"></i><b> Like</b></h6>
+                                                        </button>
+                                                    {{/if_eq}}
+                                                {{/if_eq}}
+                                            {{/if_eq}}
+                                        {{/each}}
+                                    </div>
+                                    <div class="col-md-1">
+                                        
+                                    </div>
+                                    <div class="col-md-5" style="position: relative; right: -75px;">
+                                        {{!-- <a href="#!"  style="color: black;"> --}}
+                                        <button class="btn btn-link p-0 m-1" style="text-decoration: none;">
+                                            <h6 class="hoverColor"><i class="fas fa-comment"></i><b> Comment</b></h6>
+                                        </button>
+                                        {{!-- </a> --}}
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                <form autocomplete="off" action="/userFriendCommentUpload" method="POST">
+                                    <input name="postOwnerUniqueValue"  type="text" value="{{../resultUser.userUniqueId}}" hidden>
+                                    <input name="postKeyValue"  type="text" value="{{this.postUniqueId}}" hidden>
+                                    <input class="form-control" type="text" name="commentText" placeholder="Add a comment..." aria-label="Search" required>
+                                    <button type="submit" style="display: none;" onclick="commentNotification(this)" value="{{this.postUniqueId}}"></button>
+                                </form>
+                            </li>
+                        
+                            {{#if_notEq this.commentCount 0}}
+                                <li class="list-group-item" style=" position: relative; left: 120px; width: 750px;">
+                                    <div class="p-1 bg-white">
+                                        {{#each ../allMyComment}}
+                                        {{#if_eq this.originPostUniqueID ../this.postUniqueId}}
+                                            <div class="my-2 px-2 bg-light rounded">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <form class="" id="friendErProfileThekeCommentkora" action="/myFriendProfileCommentSetting" method="POST">
+                                                            <input class="input1" type="text" name="postOwnerID" value="{{../../resultUser.userUniqueId}}" hidden>
+                                                            <input class="input1" type="text" name="commentOwnerIDFriendProfile" value="{{this.ownerCommentUniqueID}}" hidden>
+                                                            <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+                                                            <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+                                                            <button type="submit" class="btn btn-link p-0 m-1"
+                                                                style="text-decoration: none; text-transform: none; color: blue; left: -4px; ">
+                                                                {{this.userName}} <span class="small text-muted">{{this.commentTime}}</span>
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-md-4" style="float: right;">
+                                                        <style type="text/css">
+                                                            .commentDropDown a {
+                                                                background-color: bg-light;
+                                                                color: black;
+                                                            }
+                                                        
+                                                            .commentDropDown a:hover {
+                                                                background-color: grey;
+                                                                color: black;
+                                                            }
+                                                        </style>
+                                                        <div class="dropdown commentDropDown">
+                                                        
+                                                            <a class="btn-floating btn-sm  dropdown-toggle rounded" style="float: right;" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false"><i style="color: black; " class="fas fa-ellipsis-h"></i></a>
+                                                            <br>
+                                                            <div class="dropdown-menu dropdown-primary" style="width: 15px;">
+                                                                <form class="" id="commentUserNameClick" action="/myCommentSettingFromHome" method="POST">
+                                                                    <input class="input1" type="text" name="postOwnerID" value="{{../../resultUser.userUniqueId}}" hidden>
+                                                                    <input class="input1" type="text" name="commentOwnerIDFriendProfile" value="{{this.ownerCommentUniqueID}}" hidden>
+                                                                    <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+                                                                    <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+
+                                                                    {{#if_eq this.ownerCommentUniqueID ../../myKey}}
+                                                                        <button class="dropdown-item" type="button" name="commentBtn" id="commentBtn"
+                                                                            onclick="submitComment(this)" value="{{this.commentUniqueId}}" data-toggle="modal"
+                                                                            data-target="#exampleModalPopovers2">&nbsp;&nbsp;Edit</button>
+                                                                        <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                                                                            class="dropdown-item">&nbsp;&nbsp;Delete</button>
+                                                                    {{/if_eq}}
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                    
+                                                <p>
+                                                    {{this.commentText}}
+                                                </p>
+                                            </div>
+                                        {{/if_eq}}
+                                
+                                        {{/each}}
+                                        {{#if_greater this.commentCount 5}}
+                                            <form class="" id="viewAllCommentIDClick" action="/myFriendOnePost" method="POST">
+                                                <input class="input1"  type="text" name="postOwnerID" value="{{../resultUser.userUniqueId}}" hidden>
+                                                <input class="input1"  type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                <center>
+                                                    <button style="color: blue;text-decoration: none; text-transform: none;" type="submit" class="btn btn-link p-0 m-1" name="settingBtn" value="view">
+                                                        view all comments
+                                                    </button>
+                                                </center>
+                                            </form>
+                                        {{/if_greater}}
+                                    </div>
+                                </li>
+                            {{/if_notEq}}
+                        <br>
+                        {{/each}}
+                        <!-- End: For file view check-->
+
+                        {{!-- Modal comment popup screen --}}
+                        <div id="exampleModalPopovers2" class="modal fade" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalPopoversLabel2">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                        <h4 class="modal-title w-100" id="exampleModalPopoversLabel2">Edit Comment</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <br>
+                        
+                                        </div>
+                                        <li class="list-group-item" style=" position: relative; left: 10px; width: 750px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <img src="" id="commentInfoAjax_img" class="rounded-circle"
+                                                        style="float: left; width: 40px;height: 35px;">
+                                                    <form action="/myProfile" method="GET">
+                                                        <button type="submit" class="btn btn-link" id="commentInfoAjax_name"
+                                                            style="position: absolute; top: -10px; left: 20px;font-weight: bold;font-size:medium; text-decoration: none;text-transform: none;"></button>
+                                                        {{!-- </a> --}}
+                                                    </form>
+                        
+                                                </div>
+                                                <div class="col-md-1">
+                                                </div>
+                                                <div class="col-md-5" style="position: relative; right: -198px;">
+                        
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 style="font-size: small;" id="commentInfoAjax_datetime" class="card-subtitle mb-2 text-muted">
+                                            </h6>
+                        
+                                            <form class="" action="/editCommentIntoMyFriend" method="POST">
+                                                <input name="commentKeyValue" id="commentInfoAjax_id" type="text" hidden>
+                                                <input name="jarPostTarID" id="jarPostTarID" type="text" value="{{resultUser.userUniqueId}}" hidden>
+                                                <div class="form-group green-border-focus">
+                                                    <textarea class="form-control" name="commentText" id="commentInfoAjax_text" rows="3"
+                                                        placeholder="Write something here..."></textarea>
+                                                </div>
+                                                <div class="row" style="height: 30px;">
+                                                    <div class="col-md-5">
+                        
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        {{!-- <button type="submit" style="float: right; top: -8px;" id="postClickButton"
+                                                                                        class="btn btn-indigo btn-sm">Save Changes</button> --}}
+                                                        <button type="button" style="float: right; top: -8px; left: -150px;"
+                                                            class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                                        <button type="submit" style="float: right; top: -50px;"
+                                                            class="btn btn-indigo btn-sm">Save Changes</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- Modal comment popup screen --}}
+                        {{!-- Notification + Socket.io --}}
+                        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+                        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+                        <script>
+                            var socket = io();
+
+
+                            function submitPost(button) {
+
+                                var data = {};
+                                data.id = button.value;
+
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify(data),
+                                    contentType: 'application/json',
+                                    url: 'http://localhost:3005/postInfoAjax',
+                                    success: function (result) {
+                                        console.log('success');
+                                        console.log(JSON.stringify(result));
+                                        document.getElementById("postInfoAjax_img").src = result.postOwnerPic;
+                                        document.getElementById("postInfoAjax_name").innerHTML = result.postOwnerName;
+                                        document.getElementById("postInfoAjax_datetime").innerHTML = result.postTime;
+                                        document.getElementById("postInfoAjax_id").value = result.postUniqueId;
+                                        document.getElementById("postInfoAjax_text").value = result.postText;
+                                    }
+                                });
+                                //document.getElementById("postKeyUnique").value = fired_button;
+                            };
+
+                            function submitComment(button) {
+
+                                var data = {};
+                                data.id = button.value;
+
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify(data),
+                                    contentType: 'application/json',
+                                    url: 'http://localhost:3005/commentInfoAjax',
+
+                                    success: function (result) {
+                                        console.log('success');
+                                        console.log(JSON.stringify(result));
+                                        document.getElementById("commentInfoAjax_img").src = result.userPhoto;
+                                        document.getElementById("commentInfoAjax_name").innerHTML = result.userName;
+                                        document.getElementById("commentInfoAjax_datetime").innerHTML = result.commentTime;
+                                        document.getElementById("commentInfoAjax_id").value = result.commentUniqueId;
+                                        document.getElementById("commentInfoAjax_text").value = result.commentText;
+                                    }
+                                });
+                                //document.getElementById("postKeyUnique").value = fired_button;
+                            };
+
+                            function followNotification(button) {
+
+                                var data = {};
+                                data.id = button.value;
+
+                                socket.emit('likeCommentPostNotificationFollow', {
+                                    friendOrGroup: 'follow',
+                                    postKey: 'postKey',
+                                    postOwnerKey: button.value, // new friend key value ... sorry for wrong name
+                                    groupKey: 'groupKey',
+                                    text: document.getElementById('myProfileSecretName').value + ' started following you',
+                                    newFriend: document.getElementById('myProfileSecretKey').value,
+                                    fromName: document.getElementById('myProfileSecretName').value,
+                                    fromKey: document.getElementById('myProfileSecretKey').value,
+                                });
+
+                            }
+
+                            function commentNotification(button) {
+
+                                var data = {};
+                                data.id = button.value;
+
+                                socket.emit('likeCommentPostNotificationHome', {
+                                    likeOrComment: 'comment',
+                                    postKey: button.value,
+                                    fromName: document.getElementById('myProfileSecretName').value,
+                                    fromKey: document.getElementById('myProfileSecretKey').value,
+                                });
+                                
+                            }
+
+                            
+                            function submitLike(button) {
+
+                                var data = {};
+                                data.id = button.value;
+
+
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify(data),
+                                    contentType: 'application/json',
+                                    url: 'http://localhost:3005/postLikeAjax',
+                                    success: function (result) {
+                                        console.log('success');
+                                        //console.log(JSON.stringify(result));
+                                        var x = document.getElementById(button.value);
+                                        var y = x.getElementsByTagName("small");
+
+                                        y[0].innerHTML = result.likeCount.toString() + " " + "likes";
+                                        
+                                        if (result.isLike == 'no') {
+                                            button.style.color = 'black';
+                                        }
+                                        else {
+                                            button.style.color = 'blue';
+
+                                            socket.emit('likeCommentPostNotificationHome', {
+                                                likeOrComment: 'like',
+                                                postKey: button.value,
+                                                fromKey: document.getElementById('myProfileSecretKey').value,
+                                                fromName: document.getElementById('myProfileSecretName').value,
+                                            });
+                                            
+                                        }
+
+                                    }
+                                });
+                                //document.getElementById("postKeyUnique").value = fired_button;
+                            };
+
+
+
+
+
+
+                            //Start Notification
+                            socket.on('postCommentLikeNotification', function (dataNotification) {
+                                if (dataNotification.friendOrGroup === 'groupPost') {
+
+                                    var nancyMomoland = {};
+                                    nancyMomoland.id = dataNotification.groupKey;
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify(nancyMomoland),
+                                        contentType: 'application/json',
+                                        url: 'http://localhost:3005/amIMember',
+
+                                        success: function (result) {
+                                            if (result === 'yes' && dataNotification.fromKey != document.getElementById('myProfileSecretKey').value) {
+                                                showDesktopNotification('SUSTCSELIFE', dataNotification.text, dataNotification.friendOrGroup, dataNotification.postKey, dataNotification.groupKey, dataNotification.postOwnerKey, dataNotification.newFriend);
+                                            }
+                                        }
+                                    });
+                                }
+                                else if (dataNotification.postOwnerKey === document.getElementById('myProfileSecretKey').value && dataNotification.fromKey != document.getElementById('myProfileSecretKey').value) {
+                                    showDesktopNotification('SUSTCSELIFE', dataNotification.text, dataNotification.friendOrGroup, dataNotification.postKey, dataNotification.groupKey, dataNotification.postOwnerKey, dataNotification.newFriend);
+                                }
+                            });
+                            /**
+                            * Check Browser Notification Permission
+                            * @type window.Notification|Window.Notification|window.webkitNotification|Window.webkitNotification|Window.mozNotification|window.mozNotification
+                            */
+                            var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+                            Notification.requestPermission(function (permission) {
+                            });
+                            /**
+                             * Request Browser Notification Permission 
+                             * @type Arguments
+                             */
+                            function requestNotificationPermissions() {
+                                if (Notification.permission !== 'denied') {
+                                    Notification.requestPermission(function (permission) {
+                                    });
+                                }
+                            }
+                            /**
+                             * Show Desktop Notification If Notification Allow
+                             * @param {type} title
+                             * @param {type} message
+                             * @param {type} icon
+                             * @returns {undefined}
+                             */
+                            function showDesktopNotification(message, body, friendOrGroup, postKey, groupKey, postOwnerKey, newFriend, icon, sound, timeout) {
+                                if (!timeout) {
+                                    timeout = 4000;
+                                }
+                                requestNotificationPermissions();
+                                var instance = new Notification(
+                                    message, {
+                                        body: body,
+                                        icon: icon,
+                                        sound: sound
+                                    }
+                                );
+                                instance.onclick = function () {
+                                    // Something to do
+                                    // window.open('http://localhost:3005/home', '_blank');
+                                    openWindowWithPost(friendOrGroup, postKey, groupKey, postOwnerKey, newFriend);
+
+                                };
+                                instance.onerror = function () {
+                                    // Something to do
+                                };
+                                instance.onshow = function () {
+                                    // Something to do
+                                };
+                                instance.onclose = function () {
+                                    // Something to do
+                                };
+                                if (sound) {
+                                    instance.sound;
+                                }
+                                setTimeout(instance.close.bind(instance), timeout);
+                                return false;
+                            }
+
+                            function openWindowWithPost(friendOrGroup, postKey, groupKey, postOwnerKey, newFriend) {
+                                if(friendOrGroup === 'friend'){
+                                    var f = document.getElementById('newWindowFormFriend');
+                                    f.eachPostUniqueID.value = postKey;
+                                    f.postOwnerID.value = postOwnerKey;
+                                    window.open('', 'TheWindow');
+                                    f.submit();
+                                }
+                                else if(friendOrGroup === 'group'){
+                                    var f = document.getElementById('newWindowFormGroup');
+                                    f.eachPostUniqueID.value = postKey;
+                                    f.eachPostOwnerUniqueID.value = postOwnerKey;
+                                    f.groupUniqueID.value = groupKey;
+                                    window.open('', 'TheWindow');
+                                    f.submit();
+                                }
+                                else if(friendOrGroup === 'groupPost'){
+                                    var f = document.getElementById('newWindowFormGroupPost');
+                                    f.groupKeyValue.value = groupKey;
+                                    window.open('', 'TheWindow');
+                                    f.submit();
+                                }
+                                else if (friendOrGroup === 'groupRequest') {
+                                    var f = document.getElementById('newWindowFormGroupPost');
+                                    f.groupKeyValue.value = groupKey;
+                                    window.open('', 'TheWindow');
+                                    f.submit();
+                                }
+                                else if(friendOrGroup === 'follow'){
+                                    var f = document.getElementById('newWindowFormFriendProfile');
+                                    f.friendUserKeyValue.value = newFriend;
+                                    window.open('', 'TheWindow');
+                                    f.submit();
+                                }
+                            }
+                            //End Notification
+
+
+
+                        </script>
+
+                    </div>
+                    <!-- Front Side -->
+                </div>
+            </div>
+        </div>
+        <div>
+        <br>
+        </div>
+    </div>
+    <!-- Full Page Intro -->
+
+<!-- Footer -->
+    <footer class="page-footer font-small gray">
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1">
+            {{!-- © 2020 CSE, SUST. All rights reserved. --}}
+            {{!-- <div id="footer"> --}}
+            <div class="">&copy All Right Reserved</div>
+            <div><a href="/behindTheScene">Behind The Scene</a> <strong>|</strong> Powered by <a
+                    href="http://cse.sust.edu">Dept. of CSE, SUST</a></div>
+            {{!-- </div> --}}
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+<!-- Footer -->
+    <!--/.Footer-->
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+
+
+
+
+</body>
+
+</html>

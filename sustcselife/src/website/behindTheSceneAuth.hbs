@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SUSTCSELIFE</title>
+    <link rel="shortcut icon" type="image/png" href="img/sust.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    {{!--
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+    <style type="text/css">
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        @media (max-width:740px) {
+            .full-page-intro {
+                height: 1000px
+            }
+        }
+
+        .carousel {
+            height: 50%
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-inner .active,
+        .carousel .carousel-inner .carousel-item {
+            height: 100%
+        }
+
+        @media (max-width:776px) {
+            .carousel {
+                height: 100%
+            }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #1C2331
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #1C2331
+            }
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1050px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 700px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .btn-transfer {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+
+        }
+
+        .buttonList:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .ipPeopleList {
+            width: 295px;
+            text-align: left;
+        }
+
+        .ipPeopleList:hover {
+            background-color: #C0C0C0;
+            color: black;
+        }
+
+        .react:hover {
+            transform: scale(1.5);
+        }
+    </style>
+    <style>
+        .sir {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .sir .madam {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 102%;
+        }
+
+        .sir .madam::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .sir:hover .madam {
+            visibility: visible;
+            font-size: 15px;
+        }
+
+        .elementToFadeInAndOut {
+            z-index: 5;
+
+            -webkit-animation: fadeinout 5s linear forwards;
+            animation: fadeinout 5s linear forwards;
+        }
+
+        @-webkit-keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-size: medium; font-family: 'Times New Roman', Times, serif;">
+
+    <!-- Start your project here-->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+        style="background-color:#21260F	; height:50px">
+        <div class="container">
+
+            <!-- Brand -->
+            <img src="./img/sust.png" style="height:40px; width:40px;">
+            <div>
+                <li class="nav-item"></li>
+            </div>
+            <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
+                <span class="brand-text">SUST</span>
+                <large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span><span
+                    style="position: relative;top: -10px;left: 1px;">&#945;</span>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <div class="active-purple-4 mb-6">
+                        <form autocomplete="off" action="/search" method="POST">
+                            <input class="form-control" type="text" name="Search" placeholder="Search"
+                                aria-label="Search" required>
+                            <button type="submit" style="display: none;" value="Search"></button>
+                        </form>
+                    </div>
+                </ul>
+
+                <a href="/messenger" class="btn-floating btn-lg btn-comm" style="color: white;" type="button"
+                    role="button"><i class="fab fa-facebook-messenger"></i>
+                    <span class="counter" style="color: red;">3</span>
+                </a>
+                <a href="notification" class="btn-floating btn-lg btn-bell" style="color: white;" type="button"
+                    role="button">
+                    <i class="far fa-bell"></i>
+                    {{#if_greater myAllNotification 0}}
+                    <span class="counter" style="color: red;">{{myAllNotification}}</span>
+                    {{/if_greater}}
+                </a>
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="{{myProPic}}" class="rounded-circle z-depth-0"
+                                style="border-radius: 50%; width: 40px; height: 40px;" alt="avatar image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-55" style="width: 10px;">
+                            <a class="dropdown-item buttonList" href="/myProfile">My Account</a>
+                            <a class="dropdown-item buttonList" href="/logout">Logout</a>
+                            {{!-- <a class="dropdown-item buttonList" href="#">Something else here</a> --}}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Creating Gap-->
+    <div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- Creating Gap-->
+
+    <!-- Success Alert -->
+    {{!-- <div class="alert alert-success alert-dismissible fade show elementToFadeInAndOut"
+        style="visibility:hidden;  width: 50%;position:fixed; top:70px; left:680px;float:right">
+        <strong>Success!</strong> Your request has been sent successfully.
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div> --}}
+    <!-- Success Alert -->
+
+    <!-- Full Page Intro -->
+    <style>
+        .developer {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 190px;
+            height: 190px;
+        }
+
+        .developer:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+
+        .developerSir {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 230px;
+            height: 200px;
+        }
+
+        .developerSir:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+
+        .developerHelp {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 120px;
+            height: 110px;
+        }
+
+        .developerHelp:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+    </style>
+
+
+    <div class="container-fluid" style="padding-left: 170px; padding-right:170px;">
+
+        <div class="card">
+            <!-- Card content -->
+            <center class="card-body">
+
+
+                {{!-- Notification + Socket.io --}}
+                <form id="newWindowFormFriend" method="post" action="/myFriendOnePost" target="TheWindow">
+                    <input type="text" name="eachPostUniqueID" hidden>
+                    <input type="text" name="postOwnerID" hidden>
+                </form>
+                <form id="newWindowFormFriendProfile" method="post" action="/friendProfile" target="TheWindow">
+                    <input type="text" name="friendUserKeyValue" hidden>
+                </form>
+                <form id="newWindowFormGroup" method="post" action="/groupPostSetting" target="TheWindow">
+                    <input type="hidden" name="settingBtn" value="view" hidden>
+                    <input type="hidden" name="eachPostUniqueID" hidden>
+                    <input type="hidden" name="eachPostOwnerUniqueID" hidden>
+                    <input type="hidden" name="groupUniqueID" hidden>
+                </form>
+                <form id="newWindowFormGroupPost" method="post" action="/viewAGroup" target="TheWindow">
+                    <input type="hidden" name="groupKeyValue" hidden>
+                </form>
+
+                <input name="myProfileSecretKey" id="myProfileSecretKey" value="{{myKey}}" hidden>
+                <input name="myProfileSecretKey" id="myProfileSecretName" value="{{myName}}" hidden>
+                {{!-- Notification + Socket.io --}}
+
+
+                <!-- Title -->
+                <center>
+                    <a href="/home" style="font-size: 25px;">SUST<strong style="font-size: 35px;">CSE</strong>LIFE<span
+                            style="position: relative;top: -12px;left: 1px;">&#945;</span></a>
+                </center>
+                <center>
+                    A Social Networking Platform
+                </center>
+                <hr>
+                <center>
+                    <h4 style="font-weight: bold;">Developed By:</h4>
+                </center>
+                <div>
+                    <br>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <center>
+                            <img class="developer" src="img/saba2.jpg">
+                            <div>
+                                <br>
+                            </div>
+                            <h3>Syeda Jannatus Saba</h3>
+                            <h6>Final Year Student</h6>
+                            <h6>Dept. of CSE</h6>
+                            <h6>Shahjalal University of Science & Technology</h6>
+                            <div>
+                                <a type="button" class="btn-floating btn-sm btn-fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <!--Twitter-->
+                                <a type="button" class="btn-floating btn-sm btn-tw">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <!--Google +-->
+                                <a type="button" class="btn-floating btn-sm btn-gplus">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <!--Linkedin-->
+                                <a type="button" class="btn-floating btn-sm btn-ins">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="col-md-6">
+                        <center>
+                            <img class="developer" src="img/bijoy1.jpeg">
+                            <div>
+                                <br>
+                            </div>
+                            <h3>Biddut Sarker Bijoy</h3>
+                            <h6>Final Year Student</h6>
+                            <h6>Dept. of CSE</h6>
+                            <h6>Shahjalal University of Science & Technology</h6>
+                            <div>
+                                <a type="button" class="btn-floating btn-sm btn-fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <!--Twitter-->
+                                <a type="button" class="btn-floating btn-sm btn-tw">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <!--Google +-->
+                                <a type="button" class="btn-floating btn-sm btn-gplus">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <!--Linkedin-->
+                                <a type="button" class="btn-floating btn-sm btn-ins">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+
+                <hr>
+                <center>
+                    <h4 style="font-weight: bold;">Under Supervision of:</h4>
+                </center>
+                <div>
+                    <br>
+                </div>
+                <center>
+
+
+                    <img class="developerSir" src="img/enam sir.jpg">
+                    <div>
+                        <br>
+                    </div>
+                    <h3>Enamul Hasan</h3>
+                    <h6>Assistant Professor</h6>
+                    <h6>Dept. of CSE</h6>
+                    <h6>Shahjalal University of Science & Technology</h6>
+                    <div>
+                        <a type="button" class="btn-floating btn-sm btn-fb">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!--Twitter-->
+                        <a type="button" class="btn-floating btn-sm btn-tw">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <!--Google +-->
+                        <a type="button" class="btn-floating btn-sm btn-gplus">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <!--Linkedin-->
+                        <a type="button" class="btn-floating btn-sm btn-ins">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </center>
+                <hr>
+                <center>
+                    <h4 style="font-weight: bold;">Special Thanks To:</h4>
+                    <br>
+                </center>
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <center>
+                            <img class="developerHelp" src="img/rifa.jpg">
+                            <div>
+                                <br>
+                            </div>
+                            <center>
+                                <h5>Nabila Jannat Rifa</h5>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Final Year Student</h8>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Dept. of CSE</h8>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Shahjalal University of Science & Technology</h8>
+                            </center>
+                            <div>
+                                <a type="button" class="btn-floating btn-sm btn-fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <!--Twitter-->
+                                <a type="button" class="btn-floating btn-sm btn-tw">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <!--Google +-->
+                                <a type="button" class="btn-floating btn-sm btn-gplus">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <!--Linkedin-->
+                                <a type="button" class="btn-floating btn-sm btn-ins">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+                            <img class="developerHelp" src="img/sharmin.jpg">
+                            <div>
+                                <br>
+                            </div>
+                            <center>
+                                <h5>Sharmin Ahmed</h5>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Final Year Student</h8>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Dept. of CSE</h8>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Shahjalal University of Science & Technology</h8>
+                            </center>
+                            <div>
+                                <a type="button" class="btn-floating btn-sm btn-fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <!--Twitter-->
+                                <a type="button" class="btn-floating btn-sm btn-tw">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <!--Google +-->
+                                <a type="button" class="btn-floating btn-sm btn-gplus">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <!--Linkedin-->
+                                <a type="button" class="btn-floating btn-sm btn-ins">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+                            <img class="developerHelp" src="img/archi2.jpg">
+                            <div>
+                                <br>
+                            </div>
+                            <center>
+                                <h5>Archi Arani Basak</h5>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Final Year Student</h8>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Dept. of CSE</h8>
+                            </center>
+                            <center style="font-size: 13px;">
+                                <h8>Shahjalal University of Science & Technology</h8>
+                            </center>
+                            <div>
+                                <a type="button" class="btn-floating btn-sm btn-fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <!--Twitter-->
+                                <a type="button" class="btn-floating btn-sm btn-tw">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <!--Google +-->
+                                <a type="button" class="btn-floating btn-sm btn-gplus">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <!--Linkedin-->
+                                <a type="button" class="btn-floating btn-sm btn-ins">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+
+                {{!-- Notification + Socket.io --}}
+                <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+                <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+                <script>
+                    var socket = io();
+
+                    // Start Notification
+                    socket.on('postCommentLikeNotification', function (dataNotification) {
+                        if (dataNotification.friendOrGroup === 'groupPost') {
+
+                            var nancyMomoland = {};
+                            nancyMomoland.id = dataNotification.groupKey;
+
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify(nancyMomoland),
+                                contentType: 'application/json',
+                                url: 'http://localhost:3005/amIMember',
+
+                                success: function (result) {
+                                    if (result === 'yes' && dataNotification.fromKey != document.getElementById('myProfileSecretKey').value) {
+                                        showDesktopNotification('SUSTCSELIFE', dataNotification.text, dataNotification.friendOrGroup, dataNotification.postKey, dataNotification.groupKey, dataNotification.postOwnerKey, dataNotification.newFriend);
+                                    }
+                                }
+                            });
+                        }
+                        else if (dataNotification.postOwnerKey === document.getElementById('myProfileSecretKey').value && dataNotification.fromKey != document.getElementById('myProfileSecretKey').value) {
+                            showDesktopNotification('SUSTCSELIFE', dataNotification.text, dataNotification.friendOrGroup, dataNotification.postKey, dataNotification.groupKey, dataNotification.postOwnerKey, dataNotification.newFriend);
+                        }
+                    });
+                    /**
+                    * Check Browser Notification Permission
+                    * @type window.Notification|Window.Notification|window.webkitNotification|Window.webkitNotification|Window.mozNotification|window.mozNotification
+                    */
+                    var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+                    Notification.requestPermission(function (permission) {
+                    });
+                    /**
+                     * Request Browser Notification Permission 
+                     * @type Arguments
+                     */
+                    function requestNotificationPermissions() {
+                        if (Notification.permission !== 'denied') {
+                            Notification.requestPermission(function (permission) {
+                            });
+                        }
+                    }
+                    /**
+                     * Show Desktop Notification If Notification Allow
+                     * @param {type} title
+                     * @param {type} message
+                     * @param {type} icon
+                     * @returns {undefined}
+                     */
+                    function showDesktopNotification(message, body, friendOrGroup, postKey, groupKey, postOwnerKey, newFriend, icon, sound, timeout) {
+                        if (!timeout) {
+                            timeout = 4000;
+                        }
+                        requestNotificationPermissions();
+                        var instance = new Notification(
+                            message, {
+                            body: body,
+                            icon: icon,
+                            sound: sound
+                        }
+                        );
+                        instance.onclick = function () {
+                            // Something to do
+                            // window.open('http://localhost:3005/home', '_blank');
+                            openWindowWithPost(friendOrGroup, postKey, groupKey, postOwnerKey, newFriend);
+
+                        };
+                        instance.onerror = function () {
+                            // Something to do
+                        };
+                        instance.onshow = function () {
+                            // Something to do
+                        };
+                        instance.onclose = function () {
+                            // Something to do
+                        };
+                        if (sound) {
+                            instance.sound;
+                        }
+                        setTimeout(instance.close.bind(instance), timeout);
+                        return false;
+                    }
+
+                    function openWindowWithPost(friendOrGroup, postKey, groupKey, postOwnerKey, newFriend) {
+                        if (friendOrGroup === 'friend') {
+                            var f = document.getElementById('newWindowFormFriend');
+                            f.eachPostUniqueID.value = postKey;
+                            f.postOwnerID.value = postOwnerKey;
+                            window.open('', 'TheWindow');
+                            f.submit();
+                        }
+                        else if (friendOrGroup === 'group') {
+                            var f = document.getElementById('newWindowFormGroup');
+                            f.eachPostUniqueID.value = postKey;
+                            f.eachPostOwnerUniqueID.value = postOwnerKey;
+                            f.groupUniqueID.value = groupKey;
+                            window.open('', 'TheWindow');
+                            f.submit();
+                        }
+                        else if (friendOrGroup === 'groupPost') {
+                            var f = document.getElementById('newWindowFormGroupPost');
+                            f.groupKeyValue.value = groupKey;
+                            window.open('', 'TheWindow');
+                            f.submit();
+                        }
+                        else if (friendOrGroup === 'groupRequest') {
+                            var f = document.getElementById('newWindowFormGroupPost');
+                            f.groupKeyValue.value = groupKey;
+                            window.open('', 'TheWindow');
+                            f.submit();
+                        }
+                        else if (friendOrGroup === 'follow') {
+                            var f = document.getElementById('newWindowFormFriendProfile');
+                            f.friendUserKeyValue.value = newFriend;
+                            window.open('', 'TheWindow');
+                            f.submit();
+                        }
+                    }
+
+                </script>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <div>
+        <br>
+    </div>
+
+    <!-- Full Page Intro -->
+
+    <!--Footer-->
+    <footer class="page-footer font-small gray">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1">
+            {{!-- © 2020 CSE, SUST. All rights reserved. --}}
+            {{!-- <div id="footer"> --}}
+                <div class="">&copy All Right Reserved</div>
+                <div><a href="/behindTheScene">Behind The Scene</a> <strong>|</strong> Powered by <a
+                        href="http://cse.sust.edu">Dept. of CSE, SUST</a></div>
+                {{!--
+            </div> --}}
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!--/.Footer-->
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+    <script type="text/javascript">
+        function ValidateSize(file) {
+            var FileSize = file.files[0].size / 1024 / 1024; // in MB
+            if (FileSize > 5) {
+                alert('File size exceeds 5 MB');
+                $(file).val(''); //for clearing with Jquery
+            } else {
+
+            }
+        }
+        function ValidatePostFileSize(file) {
+            var FileSize = file.files[0].size / 1024 / 1024; // in MB
+            if (FileSize > 500) {
+                alert('File size exceeds 500 MB');
+                $(file).val(''); //for clearing with Jquery
+            } else {
+
+            }
+        }
+
+        $(document).ready(function () {
+            $('#postClickButton').attr('disabled', true);
+
+            $('#userPostTextField').keyup(function () {
+                if ($('#userPostTextField').val() != '') {
+                    $('#postClickButton').attr('disabled', false);
+                }
+
+                else if ($("#userPostFileField").val()) {
+                    $("#postClickButton").prop('disabled', false);
+                }
+                else {
+                    $("#postClickButton").prop('disabled', true);
+                }
+            });
+
+            $("#userPostFileField").change(function () {
+                if ($("#userPostFileField").val()) {
+                    $("#postClickButton").prop('disabled', false);
+                }
+                else {
+                    $("#postClickButton").prop('disabled', true);
+                }
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

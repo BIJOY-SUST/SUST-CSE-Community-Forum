@@ -1,0 +1,39 @@
+{{!-- <form action="#" method="POST"> --}}
+    <form class="" id="commentUserNameClick" action="/groupEachPostCommentSetting" method="POST">
+        <input class="input1" type="text" name="eachCommentOwnerID" value="{{this.ownerCommentUniqueID}}" hidden>
+        <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+
+        <input class="input1" type="text" name="eachPostOwnerUniqueID" value="{{../this.postOwnerUniqueID}}" hidden>
+
+        <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+        <input class="input1" type="text" name="groupUniqueID" value="{{../../singleGroupKey}}" hidden>
+
+        <button type="submit" name="commentBtn" value="goUserProfile" class="btn btn-link p-0 m-1"
+            style="text-decoration: none; text-transform: none; color: blue; left: -4px; ">
+            {{this.userName}} <span class="small text-muted">{{this.commentTime}}</span>
+        </button>
+        {{#if_eq this.ownerCommentUniqueID ../../myKey}}
+            <button class="dropdown-item" type="button" name="commentBtn" id="commentBtn"
+                onclick="submitComment(this)" value="{{this.commentUniqueId}}" data-toggle="modal"
+                data-target="#exampleModalPopovers2">&nbsp;&nbsp;Edit</button>
+            <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                class="dropdown-item">&nbsp;&nbsp;Delete</button>
+
+        {{/if_eq}}
+
+        {{#if_notEq this.ownerCommentUniqueID ../../myKey}}
+
+            {{#if_eq ../../youKnowWho.isAdmin "yes"}}
+
+                <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                    class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+            {{/if_eq}}
+
+
+        {{/if_notEq}}
+        <p>
+            {{this.commentText}}
+        </p>
+    </form>
+    {{!--
+</form> --}}

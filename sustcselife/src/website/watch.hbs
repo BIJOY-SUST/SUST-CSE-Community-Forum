@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SUSTCSELIFE</title>
+    <link rel="shortcut icon" type="image/png" href="img/sust.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    {{!-- <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+    <style type="text/css">
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        @media (max-width:740px) {
+            .full-page-intro {
+                height: 1000px
+            }
+        }
+
+        .carousel {
+            height: 50%
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-inner .active,
+        .carousel .carousel-inner .carousel-item {
+            height: 100%
+        }
+
+        @media (max-width:776px) {
+            .carousel {
+                height: 100%
+            }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #1C2331
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #1C2331
+            }
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1050px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 700px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .btn-transfer {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+
+        }
+
+        .buttonList:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .ipPeopleList {
+            width: 310px;
+            text-align: left;
+        }
+
+        .ipPeopleList:hover {
+            background-color: #C0C0C0;
+            color: black;
+        }
+
+        .react:hover {
+            transform: scale(1.5);
+        }
+    </style>
+    <style>
+        .developer {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+    
+        }
+    
+        .developer:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+        }
+    </style>
+    <style>
+        .sir {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .sir .madam {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 102%;
+        }
+
+        .sir .madam::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .sir:hover .madam {
+            visibility: visible;
+            font-size: 15px;
+        }
+
+        .elementToFadeInAndOut {
+            z-index: 5;
+
+            -webkit-animation: fadeinout 5s linear forwards;
+            animation: fadeinout 5s linear forwards;
+        }
+
+        @-webkit-keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,80% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeinout {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,80% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-size: medium; font-family: 'Times New Roman', Times, serif;">
+
+    <!-- Start your project here-->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+        style="background-color:#21260F	; height:50px">
+        <div class="container">
+
+            <!-- Brand -->
+            <img src="./img/sust.png" style="height:40px; width:40px;" >
+            <div>
+                <li class="nav-item"></li>
+            </div>
+            <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
+                <span class="brand-text">SUST</span><large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span><span style="position: relative;top: -10px;left: 1px;">&#945;</span>
+            </a>
+            
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                        <div class="active-purple-4 mb-6">
+                            <form autocomplete="off" action="/search" method="POST">
+                                <input class="form-control" type="text" name="Search" placeholder="Search" aria-label="Search" required>
+                                <button type="submit" style="display: none;" value="Search"></button>
+                            </form>
+                        </div>
+                </ul>
+
+                {{!-- <a href="/messenger" class="btn-floating btn-lg btn-comm" style="color: white;" type="button" role="button"><i class="fab fa-facebook-messenger"></i>
+                <span class="counter" style="color: red;">3</span>
+                </a> --}}
+                <a href="notification" class="btn-floating btn-lg btn-bell" style="color: white;" type="button" role="button">
+                    <i class="far fa-bell"></i>
+
+                    {{#if_greater myAllNotification 0}}
+                        <span class="counter" style="color: red;">{{myAllNotification}}</span>
+
+                    {{/if_greater}}
+
+                </a>
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="{{myProPic}}" class="rounded-circle z-depth-0"
+                                style="border-radius: 50%; width: 40px; height: 40px;" alt="avatar image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-55" style="width: 10px;">
+                            <a class="dropdown-item buttonList" href="/myProfile">My Account</a>
+                            <a class="dropdown-item buttonList" href="/logout">Logout</a>
+                            {{!-- <a class="dropdown-item buttonList" href="#">Something else here</a> --}}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Creating Gap-->
+    <div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- Creating Gap-->
+
+    <!-- Success Alert -->
+    {{!-- <div class="alert alert-success alert-dismissible fade show elementToFadeInAndOut"
+        style="visibility:hidden;  width: 50%;position:fixed; top:70px; left:680px;float:right">
+        <strong>Success!</strong> Your request has been sent successfully.
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div> --}}
+    <!-- Success Alert -->
+
+    <!-- Full Page Intro -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"> 
+                <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <ul class="row">
+                            <h5 class="card-title" style="font-weight: bold; text-align: center;">
+
+                                {{!-- Notification + Socket.io --}}
+                                <form id="newWindowFormFriend" method="post" action="/myFriendOnePost" target="TheWindow">
+                                    <input type="text" name="eachPostUniqueID" hidden>
+                                    <input type="text" name="postOwnerID" hidden>
+                                </form>
+                                <form id="newWindowFormFriendProfile" method="post" action="/friendProfile" target="TheWindow">
+                                    <input type="text" name="friendUserKeyValue" hidden>
+                                </form>
+                                <form id="newWindowFormGroup" method="post" action="/groupPostSetting" target="TheWindow">
+                                    <input type="hidden" name="settingBtn" value="view" hidden>
+                                    <input type="hidden" name="eachPostUniqueID" hidden>
+                                    <input type="hidden" name="eachPostOwnerUniqueID" hidden>
+                                    <input type="hidden" name="groupUniqueID" hidden>
+                                </form>
+                                <form id="newWindowFormGroupPost" method="post" action="/viewAGroup" target="TheWindow">
+                                    <input type="hidden" name="groupKeyValue" hidden>
+                                </form>
+                                
+                                <input name="myProfileSecretKey" id="myProfileSecretKey" value="{{myKey}}" hidden>
+                                <input name="myProfileSecretKey" id="myProfileSecretName" value="{{myName}}" hidden>
+                                {{!-- Notification + Socket.io --}}
+
+                                <img src="{{myProPic}}" class="rounded-circle developer"
+                                    style="position:relative;left:-25px; width: 55px;height: 55px;">
+                                <a href="/myProfile"><span
+                                        style=" font-size: 23px; position: absolute; top: 30px; left: 82px; color: black;">{{myName}}</span></a>
+                            </h5>
+                        </ul>
+                        <hr>
+                        <ul class="list-group">
+                            <a href="/home" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-home"></i> News Feed
+                                </li>
+                            </a>
+                            <a href="/watch" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fab fa-youtube"></i> Watch
+                                </li>
+                            </a>
+                            
+                            <a href="/people" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> Peoples
+                                </li>
+                            </a>
+                            <a href="/group" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-users"></i> Groups
+                                </li>
+                            </a>
+                            {{!-- <a href="/messenger" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fab fa-facebook-messenger"></i> Messenger
+                                </li>
+                            </a> --}}
+                            <a href="/notification" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="far fa-bell"></i> Notifications
+                                </li>
+                            </a>
+                            <a href="/electionMain" style="color: black;">
+                                <li class="list-group-item ipPeopleList"><i class="fas fa-vote-yea"></i> Elections
+                                </li>
+                            </a>
+                            {{!-- <a href="/viewAllPeople" class="btn btn-primary btn-lg btn-block"
+                                style="height: 45px; font-size: small;">View All</a> --}}
+                            {{!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> --}}
+
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="card-title" style="font-weight: bold; text-align: center; padding-left:10px; padding-top:10px; ">My Groups</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" style="padding-right:8px;padding-left:8px; float:right;" class="btn btn-primary btn-sm btn-rounded" data-toggle="modal" data-target="#modalSubscriptionForm" ><i class="fas fa-users" aria-hidden="true"></i> Create one</button>
+                            </div> 
+                        </div>
+                        <hr>
+                        <ul class="list-group">
+
+                            {{#if_eq resultAllMyGroup.length 0}}
+                                <h7 style="text-align: center;">Ops! You have no groups</h7>
+                            {{/if_eq}}
+                            {{#if_notEq resultAllMyGroup.length 0}}
+                                {{#each resultAllMyGroup}}
+                                    <form name="friend" id="goToUserProfile" action="/viewAGroup" method="POST">
+                                        <input name="groupKeyValue" id="groupKeyValue" type="text" value="{{this.groupUniqueId}}" hidden>
+                                        <button type="submit" class="list-group-item ipPeopleList">
+                                        <span class="float-left px-1 text-white rounded"
+                                            style="position: relative; top: 0px;bottom:0px;left: -15px;"><img src="{{this.groupCoverPicAddr}}"
+                                                class="rounded-circle" style=" width: 35px; height: 30px;"></span>
+                                                {{this.groupName}}
+                                        </button>
+                                    </form>
+                                {{/each}}
+                                <br>
+                                <a href="/viewMyAllGroup" class="btn btn-sm btn-primary btn-lg btn-block"
+                                    style="height: 35px; font-size: small; text-transform:none;">View All</a>
+                            {{/if_notEq}}
+                            
+                        
+                        </ul>
+                    </div>
+
+                    {{!-- Modal Create Group --}}
+                    <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form  enctype="multipart/form-data" action="/createGroup" method="POST">
+                                    <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                        <h4 class="modal-title w-100 font-weight-bold" >Create a group</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        
+                                    </div>
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-5">
+                                            <i class="fas fa-users prefix grey-text"></i>
+                                            <input type="text" id="form3" name="username" class="form-control validate" maxlength="32" required>
+                                            <label data-error="wrong" data-success="right" for="form3">Enter your group name</label>
+                                        </div>
+
+                                        {{!-- <div class="md-form mb-4"> --}}
+                                            <div class="input-group">
+
+                                                <div class="input-group-prepend">
+                                                    <span style="height: 38px;" class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                                </div>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" onchange="ValidateSize(this)" name="myImage"
+                                                        accept="image/x-png,image/gif,image/jpeg" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
+                                                        required>
+                                                    <label class="custom-file-label" for="inputGroupFile01">Group Photo</label>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <small style="text-align: center;">File size must be under 5MB</small>
+                                            </div>
+                                            {{!-- </div> --}}
+
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button class="btn btn-sm btn-indigo">Create <i class="fas fa-paper-plane-o ml-1"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- modal create group  --}}
+
+                </div>
+            </div>
+
+            <div class="col-md-6 ">
+                {{!-- <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <li class="list-group-item">
+                            <form enctype="multipart/form-data" action="/userPostUploadFromHome" method="POST">
+                                <div class="form-group green-border-focus">
+                                    <textarea class="form-control" name="postText" id="userPostTextField" rows="3"
+                                        placeholder="What's on your mind?"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span style="height: 38px;" class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                            </div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" onchange="ValidatePostFileSize(this)" name="myFile"
+                                                    accept=".png,.jpeg,.jpg,.pdf,.mkv,.mp4" id="userPostFileField"
+                                                    aria-describedby="inputGroupFileAddon01">
+                                                <label class="custom-file-label" for="userPostFileField">File</label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <small style="text-align: center;">File size must be under 500MB</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="submit" style="float: right; top: -8px;" id="postClickButton"
+                                            class="btn btn-indigo btn-sm">Post</button>
+                                    </div>
+                                </div>
+                            </form>
+                        
+                        </li>
+                    </div>
+                
+                </div>
+                <br> --}}
+                {{#if_greater allMyPost.length 0}}
+                    
+                    
+                    <div class="card">
+                        <!-- Card content -->
+                        <div class="card-body" >
+
+                            <!-- Start: For file view check-->
+                            {{#each allMyPost}}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <img src="{{this.postOwnerPic}}" class="rounded-circle" style="float: left; width: 40px;height: 35px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <form id="postOwnerIDClick" action="/friendProfile" method="POST">
+                                                        <input name="friendUserKeyValue" id="friendUserKeyValue" type="text"
+                                                            value="{{this.postOwnerUniqueID}}" hidden>
+                                        
+                                                        <button type="submit" class="btn btn-link hoverColor"
+                                                            style="position: absolute; top: -15px; left: -30px;font-weight: bold; font-size:medium; text-decoration: none;text-transform:none;">
+                                                            {{this.postOwnerName}} 
+                                                        </button>
+                                                    </form>
+
+                                                </div>
+                                                <div class="col-md-8">
+                                                    {{#if_eq this.isUserOrGroup "group"}}
+                                                    
+                                                        <form action="/viewAGroup" method="POST">
+                                                            <input name="groupKeyValue" type="text" value="{{this.userORGroupUniqueID}}" hidden>
+                                                            <button type="submit"   class="btn btn-link hoverColor"
+                                                                style="position: absolute; top: -15px; left: 135px;font-weight: bold; font-size:medium; text-decoration: none;text-transform:none;">
+                                                                <i class="fas fa-caret-right">  </i> {{this.isGroupName}}</button>
+                                                        
+                                                        </form>
+                                                    
+                                                    {{/if_eq}}
+                                                </div>
+
+                                            </div>
+                                
+                                        </div>
+                                        {{!-- <div class="col-md-1">
+                                        </div> --}}
+                                        <div class="col-md-2" style="position: relative; right: -25px;">
+                                            <div class="dropdown">
+                                                <a class="btn-floating btn-lg grey dropdown-toggle" type="button" id="dropdownMenu3"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i style="color: black;"
+                                                        class="fas fa-ellipsis-v"></i></a>
+                                                <br>
+                                                <div class="dropdown-menu dropdown-primary" style="width: 15px;">
+
+                                                    {{#if_eq this.isUserOrGroup "user"}}
+
+                                                        {{#if_eq this.postOwnerUniqueID ../myKey}}
+                                                            <form class="" action="/myPostSetting" method="POST">
+                                                                <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                                <button class="dropdown-item" type="submit" name="settingBtn" value="view"><i
+                                                                        class="fas fa-share"></i>&nbsp;&nbsp;View</button>
+                                                                <button class="dropdown-item" type="button" onclick="submitPost(this)" name="editPostBtn" id="editPostBtn"
+                                                                    value="{{this.postUniqueId}}" data-toggle="modal" data-target="#exampleModalPopovers"><i
+                                                                        class="fas fa-cog"></i>&nbsp;&nbsp;Edit</button>
+                                                                <button class="dropdown-item" type="submit" name="settingBtn" value="delete"><i
+                                                                        class="fas fa-trash"></i>&nbsp;&nbsp;Delete</button>
+                                                            </form>
+                                                            
+                                                        {{/if_eq}}
+
+                                                        {{#if_notEq this.postOwnerUniqueID ../myKey}}
+                                                            <form class="" id="viewAllCommentIDClick" action="/myFriendOnePost" method="POST">
+                                                                <input class="input1" type="text" name="postOwnerID" value="{{../resultUser.userUniqueId}}" hidden>
+                                                                <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                                <button class="dropdown-item" type="submit" name="settingBtn" value="view"><i
+                                                                        class="fas fa-share"></i>&nbsp;&nbsp;View</button>
+                                                            </form>
+                                                        {{/if_notEq}}
+
+                                                    {{/if_eq}}
+                                                    {{#if_eq this.isUserOrGroup "group"}}
+                                                        <form class="" action="/groupPostSetting" method="POST">
+
+
+
+                                                            <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                            <input class="input1" type="text" name="eachPostOwnerUniqueID" value="{{this.postOwnerUniqueID}}" hidden>
+                                                            <input class="input1" type="text" name="groupUniqueID" value="{{this.userORGroupUniqueID}}" hidden>
+                                                            <button class="dropdown-item" type="submit" name="settingBtn" value="view"><i
+                                                                    class="fas fa-share"></i>&nbsp;&nbsp;View</button>
+                                                            {{#if_eq this.postOwnerUniqueID ../myKey}}
+                                                                <button class="dropdown-item" type="button" onclick="submitPostGroup(this)" name="editPostBtn" id="editPostBtn"
+                                                                    value="{{this.postUniqueId}}" data-toggle="modal" data-target="#exampleModalPopoversGroup"><i
+                                                                        class="fas fa-cog"></i>&nbsp;&nbsp;Edit</button>
+                                                                <button class="dropdown-item" type="submit" name="settingBtn" value="delete"><i
+                                                                        class="fas fa-trash"></i>&nbsp;&nbsp;Delete</button>
+                                                            {{/if_eq}}
+                                                        
+                                                            {{#if_notEq this.postOwnerUniqueID ../myKey}}
+
+                                                                {{#each ../myAllGroupMembersList}}
+
+                                                                    {{#if_eq ../this.userORGroupUniqueID this.groupUniqueId}}
+
+                                                                        {{#if_eq this.userUniqueId ../../myKey}}
+
+                                                                            {{#if_eq this.isAdmin "yes"}}
+                                                                                <button class="dropdown-item" type="submit" name="settingBtn" value="delete"><i
+                                                                                        class="fas fa-trash"></i>&nbsp;&nbsp;Delete</button>
+                                                                            {{/if_eq}}
+                                                                        {{/if_eq}}
+                                                                    {{/if_eq}}
+
+                                                                {{/each}}
+                                                        
+                                                        
+                                                            {{/if_notEq}}
+                                                        
+                                                        </form>
+                                                    {{/if_eq}}
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <h6 style="font-size: small;" class="card-subtitle mb-2 text-muted">{{this.postTime}}</h6>
+                                
+                                    {{#if this.postText}}
+                                        <h8 style="white-space: pre-wrap;">{{this.postText}} </h8>
+                                    {{/if}}
+                                
+                                    {{#if this.isImageFile}}
+                                        <figure class="figure" style="padding-top: 30px; padding-left: 2px; ">
+                                            <img src="{{this.postFileAddr}}" class="figure-img img-fluid z-depth-1" alt="..."
+                                                style="width: 705px;height: 400px;">
+                                        </figure>
+                                    {{/if}}
+                                
+                                    {{#if this.isPdfFile}}
+                                        <div>
+                                            <br>
+                                        </div>
+                                        <center id="myPdf">
+                                            <embed src="{{this.postFileAddr}}" width="705px" height="700px" />
+                                        </center>
+                                    {{/if}}
+                                
+                                    {{#if this.isVideoFile}}
+                                        <div>
+                                            <br>
+                                        </div>
+                                        <video class="z-depth-1" style="width: 100%; height: auto;" autoplay loop controls muted>
+                                            <source src="{{this.postFileAddr}}" type="video/mp4" />
+                                        </video>
+                                    {{/if}}
+                                
+                                    <div class="row">
+                                        <div class="col-md-6" style="position: relative; left: 35px;">
+                                            <h8 id="{{this.postUniqueId}}" style="color: black; ">
+                                                <small style="font-size: smaller;">{{this.likeCount}} likes</small>
+                                            </h8>
+                                        </div>
+                                        <div class="col-md-1">
+                                
+                                        </div>
+                                        <div class="col-md-5" style="position: relative; right: -130px;">
+                                            <h8 style="color: black;">
+                                                <small style="font-size: smaller;">{{this.commentCount}} comments</small>
+                                            </h8>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <style type="text/css">
+                                            .hoverColor:hover {
+                                                color: blue;
+                                            }
+                                        </style>
+                                        <div class="col-md-6" style="position: relative; left: 90px;">
+                                            {{#each ../resultAllLikeList}}
+                                                {{#if_eq this.originPostUniqueID ../this.postUniqueId}}
+                                                    {{#if_eq this.ownerLikeUniqueID ../../myKey}}
+                                                        {{#if_eq this.isLike "no"}}
+                                                            <button type="submit" style="color: black; text-decoration: none;" onclick="submitLike(this)"
+                                                                value="{{../this.postUniqueId}}" class="btn btn-link p-0 m-1" name="likeButton" id="blackBtn">
+                                                                <h6 class="hoverColor"><i class="fas fa-thumbs-up"></i><b> Like</b></h6>
+                                                            </button>
+                                                        {{/if_eq}}
+                                                        {{#if_eq this.isLike "yes"}}
+                                                            <button type="submit" style="color: blue; text-decoration: none;" onclick="submitLike(this)"
+                                                                value="{{../this.postUniqueId}}" class="btn btn-link p-0 m-1" name="likeButton" id="blueBtn">
+                                                                <h6 class="hoverColor"><i class="fas fa-thumbs-up"></i><b> Like</b></h6>
+                                                            </button>
+                                                        {{/if_eq}}
+                                                    {{/if_eq}}
+                                                {{/if_eq}}
+                                            {{/each}}
+                                        </div>
+                                        <div class="col-md-1">
+                                
+                                        </div>
+                                        <div class="col-md-5" style="position: relative; right: -45px;">
+                                            {{!-- <a href="#!"  style="color: black;"> --}}
+                                            <button class="btn btn-link p-0 m-1" style="text-decoration: none;">
+                                                <h6 class="hoverColor"><i class="fas fa-comment"></i><b> Comment</b></h6>
+                                            </button>
+                                            {{!-- </a> --}}
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                
+                                <li class="list-group-item" >
+                                    {{#if_eq this.isUserOrGroup "user"}}
+                                    
+                                        {{#if_eq this.postOwnerUniqueID ../myKey}}
+                                            <form autocomplete="off" action="/userCommentUploadFromHome" method="POST">
+                                                <input name="nijerPost" type="text" value="watch" hidden>
+                                                <input name="postKeyValue" id="postKeyValue" type="text" value="{{this.postUniqueId}}" hidden>
+                                                <input class="form-control" type="text" name="commentText" placeholder="Add a comment..." aria-label="Search" required>
+                                                <button type="submit" style="display: none;" value="Search"></button>
+                                            </form>
+                                        {{/if_eq}}
+                                        
+                                        {{#if_notEq this.postOwnerUniqueID ../myKey}}
+                                            <form autocomplete="off" action="/userFriendCommentUploadFromHome" method="POST">
+                                            <input name="nijerPost" type="text" value="watch" hidden>
+                                                <input name="postOwnerUniqueValue" type="text" value="{{this.postOwnerUniqueID}}" hidden>
+                                                <input name="postKeyValue" type="text" value="{{this.postUniqueId}}" hidden>
+                                                <input class="form-control" type="text" name="commentText" placeholder="Add a comment..." aria-label="Search" required>
+                                                <button type="submit" style="display: none;" onclick="commentNotification(this)" value="{{this.postUniqueId}}"></button>
+                                            </form>
+                                        {{/if_notEq}}
+                                    
+                                    {{/if_eq}}
+
+
+
+                                    {{#if_eq this.isUserOrGroup "group"}}
+                                        <form autocomplete="off" action="/groupCommentUploadFromHome" method="POST">
+                                            <input name="nijerPost" type="text" value="watch" hidden>
+                                            <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                            <input class="input1" type="text" name="groupUniqueID" value="{{this.userORGroupUniqueID}}" hidden>
+                                            <input class="form-control" type="text" name="commentText" placeholder="Add a comment..." aria-label="Search" required>
+                                            <button type="submit" style="display: none;" onclick="commentNotification(this)" value="{{this.postUniqueId}}"></button>
+                                        </form>
+                                    {{/if_eq}}
+                                    
+                                </li>
+                                
+                                {{#if_notEq this.commentCount 0}}
+                                    <li class="list-group-item" >
+                                        <div class="p-2 bg-light">
+                                            {{#each ../allMyComment}}
+                                                {{#if_eq this.originPostUniqueID ../this.postUniqueId}}
+                                                <div class="my-2 px-2 bg-white">
+
+                                                    {{#if_eq ../this.isUserOrGroup "user"}}
+                                                    
+                                                        {{#if_eq ../this.postOwnerUniqueID ../../myKey}}
+                                                            <form class="" id="commentUserNameClick" action="/myCommentSettingFromHome" method="POST">
+                                                                <input class="input1" type="text" name="commentOwnerID" value="{{this.ownerCommentUniqueID}}" hidden>
+                                                                <button type="submit" class="btn btn-link p-0 m-1"
+                                                                    style="text-decoration: none; text-transform: none; color: blue; left: -4px; ">
+                                                                    {{this.userName}} <span class="small text-muted">{{this.commentTime}}</span>
+                                                                </button>
+                                                                {{#if_eq this.ownerCommentUniqueID ../this.userORGroupUniqueID}}
+                                                                    <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+                                                                    <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+                                                                    <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                                                                        class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                                                                    <button class="btn btn-secondary btn-sm p-0 m-1 float-right" type="button" name="commentBtn" id="commentBtn"
+                                                                        onclick="submitComment(this)" value="{{this.commentUniqueId}}" data-toggle="modal"
+                                                                        data-target="#exampleModalPopovers2">Edit</button>
+                                                                
+                                                                {{/if_eq}}
+                                                            
+                                                                {{#if_notEq this.ownerCommentUniqueID ../this.userORGroupUniqueID}}
+                                                            
+                                                                    {{!-- <form class="" action="/myCommentSetting" method="POST"> --}}
+                                                                    <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+                                                                    <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+                                                                    <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                                                                        class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                                                                    {{!-- </form> --}}
+                                                            
+                                                                {{/if_notEq}}
+                                                                <p>
+                                                                    {{this.commentText}}
+                                                                </p>
+                                                            </form>
+                                                        {{/if_eq}}
+                                                        
+                                                        {{#if_notEq ../this.postOwnerUniqueID ../../myKey}}
+                                                            <form class="" id="friendErProfileThekeCommentkora" action="/myFriendProfileCommentSettingFromHome" method="POST">
+                                                            
+                                                                <input class="input1" type="text" name="postOwnerID" value="{{../this.postOwnerUniqueID}}" hidden>
+                                                                <input class="input1" type="text" name="commentOwnerIDFriendProfile" value="{{this.ownerCommentUniqueID}}" hidden>
+                                                                <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+                                                                <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+                                                            
+                                                                <button type="submit" name="commentBtn" value="goUserProfile" class="btn btn-link p-0 m-1"
+                                                                    style="text-decoration: none; text-transform: none; color: blue; left: -4px; ">
+                                                                    {{this.userName}} <span class="small text-muted">{{this.commentTime}}</span>
+                                                                </button>
+                                                                {{!-- </a> --}}
+                                                            
+                                                                {{#if_eq this.ownerCommentUniqueID ../../myKey}}
+                                                                    <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                                                                        class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                                                                    <button class="btn btn-secondary btn-sm p-0 m-1 float-right" type="button" name="commentBtn" id="commentBtn"
+                                                                        onclick="submitComment(this)" value="{{this.commentUniqueId}}" data-toggle="modal"
+                                                                        data-target="#exampleModalPopovers2">Edit</button>
+                                                                {{/if_eq}}
+                                                            
+                                                                <p style="">
+                                                                    {{this.commentText}}
+                                                                </p>
+                                                            </form>
+                                                        {{/if_notEq}}
+                                                    
+                                                    {{/if_eq}}
+                                                    {{#if_eq ../this.isUserOrGroup "group"}}
+                                                        <form class="" id="commentUserNameClick" action="/groupCommentSettingFromHome" method="POST">
+                                                            <input class="input1" type="text" name="eachCommentOwnerID" value="{{this.ownerCommentUniqueID}}" hidden>
+                                                            <input class="input1" type="text" name="eachCommentUniqueID" value="{{this.commentUniqueId}}" hidden>
+                                                            <input class="input1" type="text" name="eachPostUniqueID" value="{{../this.postUniqueId}}" hidden>
+                                                            <input class="input1" type="text" name="groupUniqueID" value="{{../this.userORGroupUniqueID}}" hidden>
+                                                        
+                                                            <button type="submit" name="commentBtn" value="goUserProfile" class="btn btn-link p-0 m-1"
+                                                                style="text-decoration: none; text-transform: none; color: blue; left: -4px; ">
+                                                                {{this.userName}} <span class="small text-muted">{{this.commentTime}}</span>
+                                                            </button>
+                                                            {{#if_eq this.ownerCommentUniqueID ../../myKey}}
+                                                                <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                                                                    class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                                                                <button class="btn btn-secondary btn-sm p-0 m-1 float-right" type="button" name="commentBtn" id="commentBtn"
+                                                                    onclick="submitComment(this)" value="{{this.commentUniqueId}}" data-toggle="modal"
+                                                                    data-target="#exampleModalPopovers2">Edit</button>
+                                                            
+                                                            {{/if_eq}}
+
+                                                            {{#if_notEq this.ownerCommentUniqueID ../../myKey}}
+                                                            
+                                                                {{#each ../../myAllGroupMembersList}}
+                                                                
+                                                                    {{#if_eq ../../this.userORGroupUniqueID this.groupUniqueId}}
+                                                                            {{#if_eq this.userUniqueId ../../../myKey}}
+                                                                                {{#if_eq this.isAdmin "yes"}}
+                                                                                    <button type="submit" name="commentBtn" value="deleteCommentBtn"
+                                                                                        class="btn btn-danger btn-sm p-0 m-1 float-right">Delete</button>
+                                                                                {{/if_eq}}
+
+                                                                            {{/if_eq}}
+                                                                    {{/if_eq}}
+                                                                
+                                                                {{/each}}
+                                                            
+                                                            
+                                                            {{/if_notEq}}
+                                                        
+                                                            
+                                                            <p>
+                                                                {{this.commentText}}
+                                                            </p>
+                                                        </form>
+                                                    {{/if_eq}}
+
+
+                                                    
+                                                </div>
+                                                {{/if_eq}}
+                                    
+                                            {{/each}}
+                                            {{#if_greater this.commentCount 5}}
+                                                {{#if_eq this.isUserOrGroup "user"}}
+                                                
+                                                    {{#if_eq this.postOwnerUniqueID ../myKey}}
+                                                        <form class="" id="viewAllCommentIDClick" action="/myPostSetting" method="POST">
+                                                            <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                            <center>
+                                                                <button style="color: blue;text-decoration: none; text-transform: none;" type="submit"
+                                                                    class="btn btn-link p-0 m-1" name="settingBtn" value="view">
+                                                                    view all comments
+                                                                </button>
+                                                            </center>
+                                                        </form>
+                                                    {{/if_eq}}
+                                                    
+                                                    {{#if_notEq this.postOwnerUniqueID ../myKey}}
+                                                        <form class="" id="viewAllCommentIDClick" action="/myFriendOnePost" method="POST">
+                                                                
+                                                            <input class="input1" type="text" name="postOwnerID" value="{{this.postOwnerUniqueID}}" hidden>
+                                                            <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                            <center>
+                                                                <button style="color: blue;text-decoration: none; text-transform: none;" type="submit"
+                                                                    class="btn btn-link p-0 m-1" name="settingBtn" value="view">
+                                                                    view all comments
+                                                                </button>
+                                                            </center>
+                                                        </form>
+                                                    {{/if_notEq}}
+                                                
+                                                {{/if_eq}}
+
+                                                {{#if_eq this.isUserOrGroup "group"}}
+                                                    <form class="" id="viewAllCommentIDClick" action="/groupPostSetting" method="POST">
+                                                        <input class="input1" type="text" name="eachPostUniqueID" value="{{this.postUniqueId}}" hidden>
+                                                        <input class="input1" type="text" name="eachPostOwnerUniqueID" value="{{this.postOwnerUniqueID}}" hidden>
+                                                        <input class="input1" type="text" name="groupUniqueID" value="{{this.userORGroupUniqueID}}" hidden>
+                                                        <center>
+                                                            <button style="color: blue;text-decoration: none; text-transform: none;" type="submit"
+                                                                class="btn btn-link p-0 m-1" name="settingBtn" value="view">
+                                                                view all comments
+                                                            </button>
+                                                        </center>
+                                                    </form>
+                                                {{/if_eq}}
+
+                                            {{/if_greater}}
+                                        </div>
+                                    </li>
+                                {{/if_notEq}}
+                                <br>
+                            {{/each}}
+                            <!-- End: For file view check-->
+
+                            {{!-- Modal post-user popup screen --}}
+                            <div id="exampleModalPopovers" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalPopoversLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                            <h4 class="modal-title w-100" id="exampleModalPopoversLabel">Edit Post</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                {{!-- <br> --}}
+                                                <h6 style="position: relative;left: 10px;width: 750px;"><i class="fas fa-cog fa-spin"></i> If you
+                                                    already
+                                                    have a file and you do not want to change it, leave this field otherwise select your preferred
+                                                    file.
+                                                </h6>
+                                            </div>
+                                            <li class="list-group-item" style=" position: relative; left: 10px; width: 750px;">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                            
+                                                        <img src="" id="postInfoAjax_img" class="rounded-circle"
+                                                            style="float: left; width: 40px;height: 35px;">
+                                                        <form action="/myProfile" method="GET">
+                                                            <button type="submit" class="btn btn-link" id="postInfoAjax_name"
+                                                                style="position: absolute; top: -10px; left: 20px;font-weight: bold;font-size:medium; text-decoration: none;text-transform: none;"></button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                    </div>
+                                                    <div class="col-md-5" style="position: relative; right: -198px;">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6 style="font-size: small;" id="postInfoAjax_datetime" class="card-subtitle mb-2 text-muted"></h6>
+                                                <form enctype="multipart/form-data" action="/editPostFromHome" method="POST">
+                                                    <input name="nijerPost" type="text" value="watch" hidden>
+                                                    <input name="postKeyValue" id="postInfoAjax_id" type="text" hidden>
+                                                    <div class="form-group green-border-focus">
+                                                        <textarea class="form-control" name="postText" id="postInfoAjax_text" rows="3"
+                                                            placeholder="Write something here..."></textarea>
+                                                    </div>
+                                                    <div class="row" style="height: 50px;">
+                                                        <div class="col-md-5">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span style="height: 38px;" class="input-group-text"
+                                                                        id="inputGroupFileAddon01">Upload</span>
+                                                                </div>
+                                                                <div class="custom-file">
+                                                                    <input type="file" id="postInfoAjax_file" class="custom-file-input"
+                                                                        onchange="ValidatePostFileSize(this)" name="myFile"
+                                                                        accept=".png,.jpeg,.jpg,.pdf,.mkv,.mp4" 
+                                                                        aria-describedby="inputGroupFileAddon01">
+                                                                    <label class="custom-file-label" for="userPostFileField">File</label>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <small style="text-align: center;">File size must be under 100MB</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                            
+                                                        </div>
+                                                        <div class="col-md-4 ">
+                                                            <button type="button" style="float: right; top: -8px; left: -150px;"
+                                                                class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" style="float: right; top: -50px;"
+                                                                class="btn btn-indigo btn-sm">Save Changes</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                            
+                            
+                                            </li>
+                            
+                                        </div>
+                                        {{!-- <div class="modal-footer justify-content-center">
+                                                                        <button type="button" class="btn btn-secondary btn-sm" 
+                                                                            data-dismiss="modal">Cancel</button>
+                                                                        <button type="submit" class="btn btn-primary btn-sm">Join</button>
+                                                                    </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{!-- Modal post user popup screen --}}
+
+                            {{!-- Modal post group popup screen --}}
+                            <div id="exampleModalPopoversGroup" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalPopoversLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                            <h4 class="modal-title w-100" id="exampleModalPopoversLabel">Edit Post</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                {{!-- <br> --}}
+                                                <h6 style="position: relative;left: 10px;width: 750px;"><i class="fas fa-cog fa-spin"></i> If you
+                                                    already
+                                                    have a file and you do not want to change it, leave this field otherwise select your preferred
+                                                    file.
+                                                </h6>
+                                            </div>
+                                            <li class="list-group-item" style=" position: relative; left: 10px; width: 750px;">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                            
+                                                        <img src="" id="postInfoAjax_img_group" class="rounded-circle"
+                                                            style="float: left; width: 40px;height: 35px;">
+                                                        <form action="/myProfile" method="GET">
+                                                            <button type="submit" class="btn btn-link hoverColor" id="postInfoAjax_name_group"
+                                                                style="position: absolute; top: -10px; left: 20px;font-weight: bold;font-size:medium; text-decoration: none;text-transform: none;"></button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <i style="position: absolute; top: 13px; left: -135px;" class="fas fa-caret-right"> </i>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <form action="/viewAGroup" method="POST">
+                                                            <input name="groupKeyValue" id="postInfoAjax_group_id" type="text" hidden>
+                                                            <button type="submit" class="btn btn-link hoverColor" id="postInfoAjax_group_name"
+                                                                style="position: absolute; top: -43px; left: 220px;font-weight: bold; font-size:medium; text-decoration: none;text-transform:none;">
+                                                                </button>
+                                                        
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6 style="font-size: small;" id="postInfoAjax_datetime_group" class="card-subtitle mb-2 text-muted"></h6>
+                                                <form enctype="multipart/form-data" action="/editGroupPostFromHome" method="POST">
+                                                    <input name="nijerPost" type="text" value="watch" hidden>
+                                                    <input name="postKeyValue" id="postInfoAjax_id_group" type="text" hidden>
+                            
+                                                    <div class="form-group green-border-focus">
+                                                        <textarea class="form-control" name="postText" id="postInfoAjax_text_group" rows="3"
+                                                            placeholder="Write something here..."></textarea>
+                                                    </div>
+                                                    <div class="row" style="height: 50px;">
+                                                        <div class="col-md-5">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span style="height: 38px;" class="input-group-text"
+                                                                        id="inputGroupFileAddon01">Upload</span>
+                                                                </div>
+                                                                <div class="custom-file">
+                                                                    <input type="file" id="postInfoAjax_file" class="custom-file-input"
+                                                                        onchange="ValidatePostFileSize(this)" name="myFile"
+                                                                        accept=".png,.jpeg,.jpg,.pdf,.mkv,.mp4" 
+                                                                        aria-describedby="inputGroupFileAddon01">
+                                                                    <label class="custom-file-label" for="userPostFileField">File</label>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <small style="text-align: center;">File size must be under 100MB</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                            
+                                                        </div>
+                                                        <div class="col-md-4 ">
+                                                            <button type="button" style="float: right; top: -8px; left: -150px;"
+                                                                class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" style="float: right; top: -50px;"
+                                                                class="btn btn-indigo btn-sm">Save Changes</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                            
+                            
+                                            </li>
+                            
+                                        </div>
+                                        {{!-- <div class="modal-footer justify-content-center">
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" 
+                                                                                                        data-dismiss="modal">Cancel</button>
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Join</button>
+                                                                                                </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{!-- Modal post group popup screen --}}
+                            
+                            {{!-- Modal comment user popup screen --}}
+                            <div id="exampleModalPopovers2" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalPopoversLabel2">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                            <h4 class="modal-title w-100" id="exampleModalPopoversLabel2">Edit Comment</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <br>
+                            
+                                            </div>
+                                            <li class="list-group-item" style=" position: relative; left: 10px; width: 750px;">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img src="" id="commentInfoAjax_img" class="rounded-circle"
+                                                            style="float: left; width: 40px;height: 35px;">
+                                                        <form action="/myProfile" method="GET">
+                                                            <button type="submit" class="btn btn-link" id="commentInfoAjax_name"
+                                                                style="position: absolute; top: -10px; left: 20px;font-weight: bold;font-size:medium; text-decoration: none;text-transform: none;"></button>
+                                                            {{!-- </a> --}}
+                                                        </form>
+                            
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                    </div>
+                                                    <div class="col-md-5" style="position: relative; right: -198px;">
+                            
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6 style="font-size: small;" id="commentInfoAjax_datetime" class="card-subtitle mb-2 text-muted">
+                                                </h6>
+                            
+                                                <form class="" action="/editCommentFromHome" method="POST">
+                                                    <input name="nijerPost" type="text" value="watch" hidden>
+                                                    <input name="commentKeyValue" id="commentInfoAjax_id" type="text" hidden>
+                                                    <div class="form-group green-border-focus">
+                                                        <textarea class="form-control" name="commentText" id="commentInfoAjax_text" rows="3"
+                                                            placeholder="Write something here..."></textarea>
+                                                    </div>
+                                                    <div class="row" style="height: 30px;">
+                                                        <div class="col-md-5">
+                            
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            {{!-- <button type="submit" style="float: right; top: -8px;" id="postClickButton"
+                                                                                            class="btn btn-indigo btn-sm">Save Changes</button> --}}
+                                                            <button type="button" style="float: right; top: -8px; left: -150px;"
+                                                                class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" style="float: right; top: -50px;"
+                                                                class="btn btn-indigo btn-sm">Save Changes</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{!-- Modal comment user popup screen --}}
+                            
+                            <script>
+                                function submitPost(button) {
+
+                                    var data = {};
+                                    data.id = button.value;
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify(data),
+                                        contentType: 'application/json',
+                                        url: 'http://localhost:3005/postInfoAjax',
+                                        success: function (result) {
+                                            console.log('success');
+                                            console.log(JSON.stringify(result));
+                                            document.getElementById("postInfoAjax_img").src = result.postOwnerPic;
+                                            document.getElementById("postInfoAjax_name").innerHTML = result.postOwnerName;
+                                            document.getElementById("postInfoAjax_datetime").innerHTML = result.postTime;
+                                            document.getElementById("postInfoAjax_id").value = result.postUniqueId;
+                                            document.getElementById("postInfoAjax_text").value = result.postText;
+                                        }
+                                    });
+                                    //document.getElementById("postKeyUnique").value = fired_button;
+                                }; 
+
+                                function submitPostGroup(button) {
+
+                                    var data = {};
+                                    data.id = button.value;
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify(data),
+                                        contentType: 'application/json',
+                                        url: 'http://localhost:3005/postInfoAjax',
+                                        success: function (result) {
+                                            console.log('success');
+                                            console.log(JSON.stringify(result));
+                                            document.getElementById("postInfoAjax_img_group").src = result.postOwnerPic;
+                                            document.getElementById("postInfoAjax_name_group").innerHTML = result.postOwnerName;
+                                            document.getElementById("postInfoAjax_datetime_group").innerHTML = result.postTime;
+                                            document.getElementById("postInfoAjax_id_group").value = result.postUniqueId;
+                                            document.getElementById("postInfoAjax_text_group").value = result.postText;
+                                            document.getElementById("postInfoAjax_group_id").value = result.userORGroupUniqueID;
+                                            document.getElementById("postInfoAjax_group_name").innerHTML = result.isGroupName;
+
+                                            
+                                        }
+                                    });
+                                    //document.getElementById("postKeyUnique").value = fired_button;
+                                };
+
+                                function submitComment(button) {
+
+                                    var data = {};
+                                    data.id = button.value;
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify(data),
+                                        contentType: 'application/json',
+                                        url: 'http://localhost:3005/commentInfoAjax',
+
+                                        success: function (result) {
+                                            console.log('success');
+                                            console.log(JSON.stringify(result));
+                                            document.getElementById("commentInfoAjax_img").src = result.userPhoto;
+                                            document.getElementById("commentInfoAjax_name").innerHTML = result.userName;
+                                            document.getElementById("commentInfoAjax_datetime").innerHTML = result.commentTime;
+                                            document.getElementById("commentInfoAjax_id").value = result.commentUniqueId;
+                                            document.getElementById("commentInfoAjax_text").value = result.commentText;
+                                        }
+                                    });
+                                    //document.getElementById("postKeyUnique").value = fired_button;
+                                };
+
+                                function commentNotification(button) {
+
+                                    var data = {};
+                                    data.id = button.value;
+
+                                    socket.emit('likeCommentPostNotificationHome', {
+                                        likeOrComment: 'comment',
+                                        postKey: button.value,
+                                        fromName: document.getElementById('myProfileSecretName').value,
+                                        fromKey: document.getElementById('myProfileSecretKey').value,
+                                    });
+
+                                }
+
+
+                                function submitLike(button) {
+
+                                    var data = {};
+                                    data.id = button.value;
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify(data),
+                                        contentType: 'application/json',
+                                        url: 'http://localhost:3005/postLikeAjax',
+                                        success: function (result) {
+                                            console.log('success');
+                                            //console.log(JSON.stringify(result));
+                                            var x = document.getElementById(button.value);
+                                            var y = x.getElementsByTagName("small");
+
+                                            y[0].innerHTML = result.likeCount.toString() + " " + "likes";
+                                            
+                                            if (result.isLike == 'no') {
+                                                button.style.color = 'black';
+                                            }
+                                            else {
+                                                button.style.color = 'blue';
+
+                                                socket.emit('likeCommentPostNotificationHome', {
+                                                    likeOrComment: 'like',
+                                                    postKey: button.value,
+                                                    fromKey: document.getElementById('myProfileSecretKey').value,
+                                                    fromName: document.getElementById('myProfileSecretName').value,
+                                                });
+                                            }
+
+                                        }
+                                    });
+                                    //document.getElementById("postKeyUnique").value = fired_button;
+                                };
+
+                                //Start Notification
+                                    socket.on('postCommentLikeNotification', function (dataNotification) {
+                                        if (dataNotification.friendOrGroup === 'groupPost') {
+
+                                            var nancyMomoland = {};
+                                            nancyMomoland.id = dataNotification.groupKey;
+
+                                            $.ajax({
+                                                type: 'POST',
+                                                data: JSON.stringify(nancyMomoland),
+                                                contentType: 'application/json',
+                                                url: 'http://localhost:3005/amIMember',
+
+                                                success: function (result) {
+                                                    if (result === 'yes' && dataNotification.fromKey != document.getElementById('myProfileSecretKey').value) {
+                                                        showDesktopNotification('SUSTCSELIFE', dataNotification.text, dataNotification.friendOrGroup, dataNotification.postKey, dataNotification.groupKey, dataNotification.postOwnerKey, dataNotification.newFriend);
+                                                    }
+                                                }
+                                            });
+                                        }
+                                        else if (dataNotification.postOwnerKey === document.getElementById('myProfileSecretKey').value && dataNotification.fromKey != document.getElementById('myProfileSecretKey').value) {
+                                            showDesktopNotification('SUSTCSELIFE', dataNotification.text, dataNotification.friendOrGroup, dataNotification.postKey, dataNotification.groupKey, dataNotification.postOwnerKey, dataNotification.newFriend);
+                                        }
+                                    });
+                                    /**
+                                    * Check Browser Notification Permission
+                                    * @type window.Notification|Window.Notification|window.webkitNotification|Window.webkitNotification|Window.mozNotification|window.mozNotification
+                                    */
+                                    var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+                                    Notification.requestPermission(function (permission) {
+                                    });
+                                    /**
+                                        * Request Browser Notification Permission 
+                                        * @type Arguments
+                                        */
+                                    function requestNotificationPermissions() {
+                                        if (Notification.permission !== 'denied') {
+                                            Notification.requestPermission(function (permission) {
+                                            });
+                                        }
+                                    }
+                                    /**
+                                        * Show Desktop Notification If Notification Allow
+                                        * @param {type} title
+                                        * @param {type} message
+                                        * @param {type} icon
+                                        * @returns {undefined}
+                                        */
+                                    function showDesktopNotification(message, body, friendOrGroup, postKey, groupKey, postOwnerKey, newFriend, icon, sound, timeout) {
+                                        if (!timeout) {
+                                            timeout = 4000;
+                                        }
+                                        requestNotificationPermissions();
+                                        var instance = new Notification(
+                                            message, {
+                                            body: body,
+                                            icon: icon,
+                                            sound: sound
+                                        }
+                                        );
+                                        instance.onclick = function () {
+                                            // Something to do
+                                            // window.open('http://localhost:3005/home', '_blank');
+                                            openWindowWithPost(friendOrGroup, postKey, groupKey, postOwnerKey, newFriend);
+
+                                        };
+                                        instance.onerror = function () {
+                                            // Something to do
+                                        };
+                                        instance.onshow = function () {
+                                            // Something to do
+                                        };
+                                        instance.onclose = function () {
+                                            // Something to do
+                                        };
+                                        if (sound) {
+                                            instance.sound;
+                                        }
+                                        setTimeout(instance.close.bind(instance), timeout);
+                                        return false;
+                                    }
+
+                                    function openWindowWithPost(friendOrGroup, postKey, groupKey, postOwnerKey, newFriend) {
+                                        if (friendOrGroup === 'friend') {
+                                            var f = document.getElementById('newWindowFormFriend');
+                                            f.eachPostUniqueID.value = postKey;
+                                            f.postOwnerID.value = postOwnerKey;
+                                            window.open('', 'TheWindow');
+                                            f.submit();
+                                        }
+                                        else if (friendOrGroup === 'group') {
+                                            var f = document.getElementById('newWindowFormGroup');
+                                            f.eachPostUniqueID.value = postKey;
+                                            f.eachPostOwnerUniqueID.value = postOwnerKey;
+                                            f.groupUniqueID.value = groupKey;
+                                            window.open('', 'TheWindow');
+                                            f.submit();
+                                        }
+                                        else if (friendOrGroup === 'groupPost') {
+                                            var f = document.getElementById('newWindowFormGroupPost');
+                                            f.groupKeyValue.value = groupKey;
+                                            window.open('', 'TheWindow');
+                                            f.submit();
+                                        }
+                                        else if (friendOrGroup === 'groupRequest') {
+                                            var f = document.getElementById('newWindowFormGroupPost');
+                                            f.groupKeyValue.value = groupKey;
+                                            window.open('', 'TheWindow');
+                                            f.submit();
+                                        }
+                                        else if (friendOrGroup === 'follow') {
+                                            var f = document.getElementById('newWindowFormFriendProfile');
+                                            f.friendUserKeyValue.value = newFriend;
+                                            window.open('', 'TheWindow');
+                                            f.submit();
+                                        }
+                                    }
+                                //End Notification
+
+                            </script>
+
+                        </div>
+                    </div>
+                {{/if_greater}}
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title" style="font-weight: bold; text-align: center;"><i class="fas fa-cog fa-spin"></i> Suggestions For You</h6>
+                        <hr>
+                        <ul class="list-group">
+                            {{#each resultAllFreeUser}}
+                                <form name="friend" id="goToUserProfile" action="/friendProfile" method="POST">
+                                    <input name="friendUserKeyValue" id="friendUserKeyValue" type="text" value="{{this.userUniqueId}}" hidden>
+                                    {{!-- <a href="#!" onclick="document.getElementById('goToUserProfile').submit()" style="color: black;"> --}}
+                                    <button type="submit" class="list-group-item ipPeopleList">
+                                        
+                                        {{!-- <li class="list-group-item ipPeopleList"> --}}
+                                            
+                                            <span class="float-left px-1 text-white rounded"
+                                                style="position: relative; top: 0px;bottom:0px; left: -15px;"><img src="{{this.userProPicAddr}}" class="rounded-circle"
+                                                    style=" width: 35px;height:30px"></span>
+                                                    {{this.userName}}
+                                        {{!-- </li> --}}
+                                    </button>
+                                    {{!-- </a> --}}
+                                </form>
+                            {{/each}}
+                             
+                        </ul>
+                    </div>
+
+                </div>
+                <br> 
+                <div class="card">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h6 class="card-title" style="font-weight: bold; text-align: center;"><i class="fas fa-cog fa-spin"></i> Find Groups and Communities</h6>
+                        <hr>
+                        <ul class="list-group">
+                            {{#each resultAllOthersGroup}}
+                                <input name="groupKeyValue" id="groupKeyValue" type="text" value="{{this.groupUniqueId}}" hidden>
+                                <button type="button"   class="list-group-item ipPeopleList" onclick="joinGroup(this)" 
+                                value="{{this.groupUniqueId}}" data-toggle="modal" data-target="#exampleModalPopovers3">
+                                    
+                                    <span class="float-left px-1 text-white rounded"
+                                        style="position: relative; top: 0px;bottom:0px; left: -15px;"><img src="{{this.groupCoverPicAddr}}"
+                                            class="rounded-circle" style=" width: 35px; height: 30px;"></span>
+                                            {{this.groupName}}
+                                </button>
+                            {{/each}}
+
+
+                            {{!-- Modal Join Group --}}
+                            <div id="exampleModalPopovers3" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalPopoversLabel">
+                                <div class="modal-dialog " role="document">
+                                    <div class="modal-content">
+                                        <form id="modalJoinFormID" action="/groupJoinRequestFromHome" method="POST">
+                            
+                                            <div class="modal-header text-center" style="background-color: darkolivegreen;">
+                                                <h4 class="modal-title" id="exampleModalPopoversLabel">Are you sure you want to join this group?</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{!-- <h4>Are you sure you want to join this group?</h4> --}}
+                                                <h7>Request message</h7>
+                                                <input name="groupKeyUnique" id="joinGroupKeyUnique" type="text" hidden>
+                                                
+                                                <div class="form-group green-border-focus">
+                                                    <textarea class="form-control" name="requestMessage" id="exampleFormControlTextarea5" rows="4"
+                                                        placeholder="Write something here..." required></textarea>
+                                                </div>
+                                                <h8>This is the text a user may send to the group administrators.</h8>
+                            
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-sm" 
+                                                    data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary btn-sm">Join</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            {{!-- Modal Join Group --}}
+                            <script>
+                                function joinGroup(button) {
+
+                                    var data = {};
+                                    data.id = button.value;
+                                    document.getElementById("joinGroupKeyUnique").value = button.value;
+
+                                }
+                            </script>
+                                
+                        </ul>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div>
+            <br>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <!-- Full Page Intro -->
+
+    <!--Footer-->
+    <footer class="page-footer font-small gray">
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1" >
+            {{!-- © 2020 CSE, SUST. All rights reserved. --}}
+            {{!-- <div id="footer"> --}}
+                <div class="">&copy All Right Reserved</div>
+                <div><a href="/behindTheScene">Behind The Scene</a> <strong>|</strong> Powered by <a
+                        href="http://cse.sust.edu">Dept. of CSE, SUST</a></div>
+            {{!-- </div> --}}
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!--/.Footer-->
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+    <script type="text/javascript">
+        function ValidateSize(file) {
+            var FileSize = file.files[0].size / 1024 / 1024; // in MB
+            if (FileSize > 5) {
+                alert('File size exceeds 5 MB');
+                $(file).val(''); //for clearing with Jquery
+            } else {
+
+            }
+        }
+        function ValidatePostFileSize(file) {
+                var FileSize = file.files[0].size / 1024 / 1024; // in MB
+                if (FileSize > 500) {
+                    alert('File size exceeds 500 MB');
+                    $(file).val(''); //for clearing with Jquery
+                } else {
+
+                }
+        }
+
+        $(document).ready(function () {
+            $('#postClickButton').attr('disabled', true);
+            
+            $('#userPostTextField').keyup(function () {
+                if ($('#userPostTextField').val() != '') {
+                    $('#postClickButton').attr('disabled', false);
+                }
+    
+                else if ($("#userPostFileField").val()) {
+                    $("#postClickButton").prop('disabled', false);
+                }
+                else {
+                    $("#postClickButton").prop('disabled', true);
+                }
+            });
+
+            $("#userPostFileField").change(function () {
+                if ($("#userPostFileField").val()) {
+                    $("#postClickButton").prop('disabled', false);
+                }
+                else {
+                    $("#postClickButton").prop('disabled', true);
+                }
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

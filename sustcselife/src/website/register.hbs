@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SUSTCSELIFE</title>
+    <link rel="shortcut icon" type="image/png" href="img/sust.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        @media (max-width:740px) {
+            .full-page-intro {
+                height: 1000px
+            }
+        }
+
+        .carousel {
+            height: 50%
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-inner .active,
+        .carousel .carousel-inner .carousel-item {
+            height: 100%
+        }
+
+        @media (max-width:776px) {
+            .carousel {
+                height: 100%
+            }
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        }
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #1C2331
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #1C2331
+            }
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 1050px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .view {
+                height: 700px;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body style="font-size: medium; font-family: 'Times New Roman', Times, serif;">
+
+    <!-- Start your project here-->
+    {{!-- <header> --}}
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+            style="background-color:#21260F	; height:50px">
+            {{!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"> --}}
+                <div class="container">
+
+                    <!-- Brand -->
+                    <img src="./img/sust.png" style="height:40px; width:40px;">
+                    <div>
+                        <li class="nav-item"></li>
+                    </div>
+                    <a class="navbar-brand" href="/" style=" font-family: azonix; font-size: 22px; ">
+                        {{!-- <strong>Phoenix</strong> --}}
+                        <span class="brand-text">SUST</span>
+                        <large style="font-size: 30px;">CSE</large><span class="brand-text">LIFE</span><span
+                            style="position: relative;top: -10px;left: 1px;">&#945;</span>
+                    </a>
+
+                    <!-- Collapse -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Links -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <!-- Left -->
+                        <ul class="navbar-nav mr-auto">
+
+                        </ul>
+
+                        <!-- Right -->
+                        <ul class="navbar-nav nav-flex-icons">
+
+                            <li class="nav-item">
+                                <a href="/register" class="nav-link border border-light rounded">
+                                    <i class="fa fa-user mr-2"></i>Sign Up
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" target="_blank">
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/login" class="nav-link border border-light rounded">
+                                    <i class="fas fa-sign-in-alt"></i>Log In
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </nav>
+            <!-- Navbar -->
+
+            <!-- Success Alert -->
+            <div class="alert alert-{{alert_name}} alert-dismissible fade show" role="alert"
+                style="visibility:{{alert_msg_visibility}};  width: 50%;position:fixed; top:50px; left:680px;float:right">
+                <strong style="font-weight: bold;">{{SorF}}</strong> {{status}}
+                {{!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+
+                </button> --}}
+            </div>
+            <!-- Success Alert -->
+
+
+            <!-- Full Page Intro -->
+            <div class="view full-page-intro" style="height:100%;width: 100%;">
+
+                <!--Video source-->
+                <video class="video-intro" autoplay loop muted>
+                    <source src="https://mdbootstrap.com/img/video/Lines-min.mp4" type="video/mp4">
+
+                    {{!--
+                    <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" /> --}}
+                </video>
+
+                <!-- Mask & flexbox options-->
+                <div class="mask rgba-blue-light d-flex justify-content-center align-items-center">
+
+                    <!-- Content -->
+                    <div class="container">
+
+                        <!--Grid row-->
+                        <div class="row d-flex h-100 justify-content-center align-items-center wow fadeIn">
+
+                            <!--Grid column-->
+                            <div class="col-md-6 mb-4 white-text text-center text-md-left">
+
+                                <h1 style=" font-family: azonix; font-size: xx-large;"
+                                    class="display-4 font-weight-bold">
+                                    Connect with friends and
+                                    the world around you.</h1>
+
+                                <hr class="hr-light">
+
+                                <p>
+                                    <strong>See photos and updates from your friends.</strong>
+                                </p>
+                                <p>
+                                    <strong>Follow your interests.</strong>
+                                </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong>Hear what people are talking about.</strong>
+                                </p>
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-md-6 col-xl-5 mb-4">
+
+                                <!--Card-->
+                                <div class="card">
+
+                                    <!--Card content-->
+                                    <div class="card-body">
+
+                                        <!-- Form -->
+                                        <form enctype="multipart/form-data" action="/register" method="POST">
+                                            <!-- Heading -->
+                                            <h3 class="dark-grey-text text-center">
+                                                <strong>Register</strong>
+                                            </h3>
+                                            <hr>
+
+                                            <div class="md-form">
+                                                <i class="fas fa-user prefix"></i>
+                                                <input type="text" id="inputValidationEx" name="username"
+                                                    class="form-control" required>
+                                                <label for="inputValidationEx" data-error="wrong"
+                                                    data-success="right">Enter your full name</label>
+                                            </div>
+
+                                            <div class="md-form">
+                                                <i class="fas fa-registered prefix"></i>
+                                                <input type="text" id="inputValidationEx11" name="regno"
+                                                    class="form-control" required>
+                                                <label for="inputValidationEx11" data-error="wrong"
+                                                    data-success="right">Enter your registration number</label>
+                                            </div>
+
+                                            <div class="md-form">
+                                                <i class="fas fa-envelope prefix"></i>
+                                                <input type="email" id="inputValidationEx2" name="email"
+                                                    class="form-control" required>
+                                                <label for="inputValidationEx2" data-error="wrong"
+                                                    data-success="right">Enter your e-mail address</label>
+                                            </div>
+                                            <div class="md-form">
+                                                <i class="fas fa-lock prefix"></i>
+                                                <input type="password" id="inputValidationEx3" name="password"
+                                                    class="form-control" required>
+                                                <label for="inputValidationEx3" data-error="wrong"
+                                                    data-success="right">Enter a password</label>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"
+                                                        id="inputGroupFileAddon01">Upload</span>
+                                                </div>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input"
+                                                        onchange="ValidateSize(this)" name="myImage"
+                                                        accept="image/x-png,image/gif,image/jpeg" id="inputGroupFile01"
+                                                        aria-describedby="inputGroupFileAddon01" required>
+                                                    <label class="custom-file-label" for="inputGroupFile01">Choose a
+                                                        profile picture</label>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <small style="text-align: center;">Image size must be under 5MB</small>
+                                            </div>
+
+                                            {{!-- <div class="md-form">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                                <input type="file" name="myImage"
+                                                    accept="image/x-png,image/gif,image/jpeg" />
+
+                                            </div> --}}
+                                            <div class="text-center">
+                                                <br>
+                                                <button class="btn  btn-indigo"
+                                                    style="text-transform: none;">Submit</button>
+                                                <hr>
+                                                <fieldset class="form-check">
+                                                    {{!-- <input type="checkbox" class="form-check-input"
+                                                        id="checkbox1"> --}}
+                                                    <label for="checkbox1"
+                                                        class="form-check-label dark-grey-text">Already have an account?
+                                                        Click <a href="/login" style="color: green;"><b>here</b></a> to
+                                                        login</label>
+                                                </fieldset>
+                                            </div>
+
+                                        </form>
+                                        <!-- Form -->
+
+                                    </div>
+
+                                </div>
+                                <!--/.Card-->
+
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                    </div>
+                    <!-- Content -->
+
+                </div>
+                <!-- Mask & flexbox options-->
+
+            </div>
+            <!-- Full Page Intro -->
+
+            {{!--
+    </header> --}}
+    <!--Footer-->
+    <footer class="page-footer font-small gray">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1">
+            {{!-- © 2020 CSE, SUST. All rights reserved. --}}
+            {{!-- <div id="footer"> --}}
+                <div class="">&copy All Right Reserved</div>
+                <div><a href="/behindTheScene">Behind The Scene</a> <strong>|</strong> Powered by <a
+                        href="http://cse.sust.edu">Dept. of CSE, SUST</a></div>
+                {{!--
+            </div> --}}
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+    <script type="text/javascript">
+        function ValidateSize(file) {
+            var FileSize = file.files[0].size / 1024 / 1024; // in MB
+            if (FileSize > 5) {
+                alert('File size exceeds 5 MB');
+                $(file).val(''); //for clearing with Jquery
+            } else {
+
+            }
+        }
+    </script>
+</body>
+
+</html>
