@@ -17,7 +17,7 @@
     "express-session": "^1.17.2",
     "file-system": "^2.2.2",
     "handlebars-helpers": "^0.10.0",
-    "hbs": "^4.1.0",
+    "hbs": "^4.2.0",
     "hbs-helpers": "^1.0.3",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.6",
